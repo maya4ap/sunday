@@ -1,13 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import Form from './Form';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Particles from 'react-particles-js';
 
 /*
 * Sunday
 *
 */
+const particleOpt ={
+            		particles: {
+						number: {
+							value:150,
+							density:{
+								enable:true,
+								value_area: 800
+							}
+						}
+            		}
+            	}
+
 function App() {
 	
 	  return (
@@ -18,6 +31,9 @@ function App() {
 		<Route path="/" exact render={
 		()=>{
 			return (
+			
+			<div>
+			
 			
 			<form>
 			<h1>Home</h1>
@@ -31,10 +47,6 @@ function App() {
 			</div>
 			<div>
 				<label>Last Name </label>
-				<input type='text'/>
-			</div>
-			<div>
-				<label>First Name </label>
 				<input type='text'/>
 			</div>
 			<div>
@@ -87,6 +99,11 @@ function App() {
 			
 			
 			
+			<Particles 
+              params={particleOpt}
+           
+            />
+			</div>
 			
 			)
 		}
@@ -94,9 +111,15 @@ function App() {
 	<Route path="/donate" exact render={
 		()=>{
 			return (
+			<div>
 			<Form/>
-			//<h1>donate here!</h1>
 			
+			
+			<Particles 
+              params={particleOpt}
+           
+            />
+			</div>
 			)
 		}
 	}/>
