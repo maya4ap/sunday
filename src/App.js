@@ -28,39 +28,63 @@ const data = [
   [3, 3.5],
   [6.5, 7]
 ];
-const ExampleChart = () => {
+const PieChart = () => {
   return (
   
   
- <Chart
-  width={1000}
-  height={350}
-  chartType="Calendar"
+<Chart
+  width={'500px'}
+  height={'300px'}
+  chartType="PieChart"
   loader={<div>Loading Chart</div>}
   data={[
-    [{ type: 'date', id: 'Date' }, { type: 'number', id: 'Won/Loss' }],
-    [new Date(2012, 3, 13), 37032],
-    [new Date(2012, 3, 14), 38024],
-    [new Date(2012, 3, 15), 38024],
-    [new Date(2012, 3, 16), 38108],
-    [new Date(2012, 3, 17), 38229],
-    [new Date(2013, 1, 4), 38177],
-    [new Date(2013, 1, 5), 38705],
-    [new Date(2013, 1, 12), 38210],
-    [new Date(2013, 1, 13), 38029],
-    [new Date(2013, 1, 19), 38823],
-    [new Date(2013, 1, 23), 38345],
-    [new Date(2013, 1, 24), 38436],
-    [new Date(2013, 2, 10), 38447],
+    ['Task', 'Hours per Day'],
+    ['Work', 11],
+    ['Eat', 2],
+    ['Commute', 2],
+    ['Watch TV', 2],
+    ['Sleep', 7],
   ]}
   options={{
-    title: 'Red Sox Attendance',
+    title: 'My Daily Activities',
   }}
   rootProps={{ 'data-testid': '1' }}
 />
   );
 };
 
+
+const ColumnChart = () => {
+	return (
+	
+	  <Chart
+    width={400}
+    height={300}
+    chartType="ColumnChart"
+    loader={<div>Loading Chart</div>}
+    data={[
+      ['City', '2010 Population', '2000 Population'],
+      ['New York City, NY', 8175000, 8008000],
+      ['Los Angeles, CA', 3792000, 3694000],
+      ['Chicago, IL', 2695000, 2896000],
+      ['Houston, TX', 2099000, 1953000],
+      ['Philadelphia, PA', 1526000, 1517000],
+    ]}
+    options={{
+      title: 'Population of Largest U.S. Cities',
+      chartArea: { width: '30%' },
+      hAxis: {
+        title: 'Total Population',
+        minValue: 0,
+      },
+      vAxis: {
+        title: 'City',
+      },
+    }}
+    legendToggle
+  />
+	);
+};
 
 const particleOpt ={
             		particles: {
@@ -182,12 +206,20 @@ function App() {
 			return (
 			<div>
 			
-			
+			<div style={{ display: 'flex', maxWidth: 900 }}>
+			  <PieChart/>
+			  <ColumnChart/>
+			</div>
+			<div style={{ display: 'flex' }}>
+			 <ColumnChart/>
+			 <PieChart/>
+			</div>
 			
 			<Particles 
               params={particleOpt}
-           
             />
+			
+			
 			</div>
 			)
 		}
@@ -198,12 +230,7 @@ function App() {
 			return (
 			<div>
 			
-			
-			
-			
-			
-			
-			<ExampleChart/>
+		
 			<Particles 
               params={particleOpt}
            
@@ -218,12 +245,10 @@ function App() {
 			return (
 			<div>
 			
-			
-			
 			<Particles 
               params={particleOpt}
-           
             />
+			
 			</div>
 			)
 		}
