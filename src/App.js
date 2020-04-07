@@ -1,5 +1,6 @@
 import React from 'react';
-
+import dataAW from './AgeWeight.json';
+import dataTH from './TaskHours.json';
 
 import { Chart } from "react-google-charts";
 
@@ -209,10 +210,14 @@ function App() {
 			<div style={{ display: 'flex', maxWidth: 900 }}>
 			  <PieChart/>
 			  <ColumnChart/>
+			  <PieChart/>
+			  <ColumnChart/>
 			</div>
 			<div style={{ display: 'flex' }}>
+			<PieChart/>
 			 <ColumnChart/>
 			 <PieChart/>
+			 <ColumnChart/>
 			</div>
 			
 			<Particles 
@@ -275,7 +280,13 @@ function App() {
 			return (
 			<div>
 			
-			
+			{
+				dataAW.map( (dataDetail, index) => {
+										return <h1> {dataDetail.Age}</h1>
+									} 
+						
+						   )
+			}
 			
 			<Particles 
               params={particleOpt}

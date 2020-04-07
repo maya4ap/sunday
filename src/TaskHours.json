@@ -1,0 +1,31 @@
+[
+	{
+		"Task":"Work",
+		"Hours per Day":11
+	},
+
+	{
+		"Task":"Eat",
+		"Hours per Day":2
+	},
+	
+	{
+		"Task":"Commute",
+		"Hours per Day":2
+	},
+	
+	{
+		"Task":"Watch TV",
+		"Hours per Day":2
+	},
+	
+
+	{
+		"Task":"Sleep",
+		"Hours per Day":7
+	}
+
+]
+
+
+
