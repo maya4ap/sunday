@@ -1,0 +1,52 @@
+{
+	"message": "successful",
+	"result" :{
+		"message": "Succesfully executed SQL query.",
+		"code":280,
+		"result": [
+			{
+			
+				"SwagCompID": "1",
+				"SwagCompName": "Facebook"
+			},
+			{
+				"SwagCompID": "10",
+				"SwagCompName": "Samsung"
+			},
+			{
+				"SwagCompID": "2",
+				"SwagCompName": "Apple"
+			},
+			{
+				"SwagCompID": "3",
+				"SwagCompName": "Amazon"
+			},
+			{
+				"SwagCompID": "4",
+				"SwagCompName": "Netflix"
+			},
+			{
+				"SwagCompID": "5",
+				"SwagCompName": "Google"
+			},
+			{
+				"SwagCompID": "6",
+				"SwagCompName": "Microsoft"
+			},
+			{
+				"SwagCompID": "7",
+				"SwagCompName": "Oracle"
+			},
+			{
+				"SwagCompID": "8",
+				"SwagCompName": "Cisco"
+			},
+			{
+				"SwagCompID": "9",
+				"SwagCompName": "8X8"
+			}
+			
+			]
+			
+	}
+}

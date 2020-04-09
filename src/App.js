@@ -1,6 +1,7 @@
 import React from 'react';
 import dataAW from './AgeWeight.json';
 import dataTH from './TaskHours.json';
+import Table from "./table";
 
 import { Chart } from "react-google-charts";
 
@@ -33,15 +34,7 @@ data.addRows([
   ['Sleep', {v:7, f:'7.000'}]
 ]);
 */
-const data1 = [
-  ["Age", "Weight"],
-  [8, 12],
-  [4, 5.5],
-  [11, 14],
-  [4, 5],
-  [3, 3.5],
-  [6.5, 7]
-];
+
 const PieChart = () => {
   return (
   
@@ -267,14 +260,14 @@ const particleOpt ={
 function App() {
 	
 	  return (
-	  
+	   
 		<Router>
 		<div className="App">
-
+		console.log("hi");
 		<Route path="/" exact render={
 		()=>{
 			return (
-			
+				
 			<div>
 			
 			
