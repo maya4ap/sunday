@@ -2,6 +2,7 @@ import React from 'react';
 import dataAW from './AgeWeight.json';
 import dataTH from './TaskHours.json';
 import Table from "./table";
+import TablesTest from './tablesTest';
 
 import { Chart } from "react-google-charts";
 
@@ -263,7 +264,7 @@ function App() {
 	   
 		<Router>
 		<div className="App">
-		console.log("hi");
+		
 		<Route path="/" exact render={
 		()=>{
 			return (
@@ -433,8 +434,8 @@ function App() {
 			return (
 			<div>
 			
-			
-			
+			//<Table/>
+			<TablesTest/>
 			<Particles 
               params={particleOpt}
            

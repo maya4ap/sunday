@@ -25,34 +25,32 @@ class table extends Component{
 	render(){
 	return(
 	<div>
+		<h1>Donate!!!~~~~~~</h1>
 		<h1>Donate</h1>
-		<h1>Donate</h1>
-		{dataAW.map( (dataDetail, index) => {
-										return <h1> {dataDetail.Age}</h1>
+		{apData.map( (dataDetail, index) => {
+										return <h1> {dataDetail.SwagCompID}</h1>
 									} 
 						
 						   )
 	}
 	
 	
-	
-	
-	 <TableContainer component={Paper}>
+	<TableContainer component={Paper}>
       <Table>
         <TableHead>
 		
           <TableRow>
-            <TableCell>Age</TableCell>
-            <TableCell align="right">Weight</TableCell>
+            <TableCell>SwagCompID</TableCell>
+            <TableCell align="right">SwagCompName</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {dataAW.map(dataAW => (
-            <TableRow key={dataAW.Age}>
+          {apData.map(apData => (
+            <TableRow key={apData.SwagCompID}>
               <TableCell component="th" scope="row">
-                {dataAW.Age}
+                {apData.SwagCompID}
               </TableCell>
-              <TableCell align="right">{dataAW.Weight}</TableCell>
+              <TableCell align="right">{apData.SwagCompName}</TableCell>
             </TableRow>
           ))}
 		    
@@ -67,7 +65,7 @@ class table extends Component{
       </Table>
     </TableContainer>
 	
-	
+	 
 	
 	
 	</div>	
