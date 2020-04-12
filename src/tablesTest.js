@@ -23,7 +23,7 @@ class table extends Component{
 	
 	
 	render(){
-		console.log(this.props.food);
+	//	console.log(this.props.food);
 		
 	return(
 	<div>

@@ -7,7 +7,7 @@ import TablePlentiful from './tablePlentiful';
 //import SearchBarGeneral from './searchBarGeneral';
 import TopBar from "./topBar"
 import LoginHome from './LoginHome';
-
+import JsonClass from './JsonClass';
 
 import { Chart } from "react-google-charts";
 
@@ -432,7 +432,7 @@ function App () {
 			
 			
 			
-			
+			<JsonClass/>
 			
 			//<Table/>
 			<TablesTest/>
