@@ -6,6 +6,8 @@ import TablesTest from './tablesTest';
 import TablePlentiful from './tablePlentiful';
 //import SearchBarGeneral from './searchBarGeneral';
 import TopBar from "./topBar"
+import LoginHome from './LoginHome';
+
 
 import { Chart } from "react-google-charts";
 
@@ -275,18 +277,9 @@ function App() {
 			<div>
 			
 			
-			<form>
-			<h1>Home</h1>
-			<div>
-				<label>Username </label>
-				<input type='text'/>
-			</div>
-			<div>
-				<label>Password </label>
-				<input type='text'/>
-			</div>
 			
-			</form>
+			<LoginHome/>
+			
 			
 			<Link to="/dashHome"> DashBoard</Link>
 			
