@@ -21,6 +21,8 @@ import Particles from 'react-particles-js';
 * comment
 */
 
+
+
 const options = {
   title: "Age vs. Weight comparison",
   hAxis: { title: "Age", viewWindow: { min: 0, max: 15 } },
@@ -399,6 +401,14 @@ function App() {
 			return (
 			<div>
 			
+			
+			
+			
+			
+			
+			
+			
+			
 			<Particles 
               params={particleOpt}
             />
@@ -412,6 +422,11 @@ function App() {
 		()=>{
 			return (
 			<div>
+			
+			
+			
+			
+			
 			
 			//<Table/>
 			<TablesTest/>
