@@ -265,12 +265,17 @@ const particleOpt ={
             		}
             	}
 
-function App() {
+
+
+function App () {
+	
+
 	
 	  return (
 	   
 		<Router>
 		<div className="App">
+		
 		
 		<Route path="/" exact render={
 		()=>{
@@ -400,6 +405,7 @@ function App() {
 		()=>{
 			return (
 			<div>
+			
 			
 			
 			

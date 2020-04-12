@@ -23,6 +23,8 @@ class table extends Component{
 	
 	
 	render(){
+		console.log(this.props.food);
+		
 	return(
 	<div>
 		<h1>Donate!!!~~~~~~</h1>
