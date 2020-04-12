@@ -1,0 +1,41 @@
+ [
+{
+"FoodID": 1234567,
+"CommonName": "Chana Masala",
+"ExpirationDate": "5-21-2020",
+"NumberAvailable": 375
+},
+
+{
+"FoodID": 1634562,
+"CommonName": "Crunchy Walnut Salad",
+"ExpirationDate": "4-29-2020",
+"NumberAvailable": 153
+},
+
+{
+"FoodID": 9876543,
+"CommonName": "Ginger Carrot Cocunut Soup",
+"ExpirationDate": "8-15-2020",
+"NumberAvailable": 993
+},
+
+{
+"FoodID": 1928374,
+"CommonName": "Buffalo Cauliflower Bowl",
+"ExpirationDate": "5-21-2020",
+"NumberAvailable": 375
+},
+
+
+
+{
+"FoodID": 1542087,
+"CommonName": "Cashew Almond Pasta",
+"ExpirationDate": "5-21-2020",
+"NumberAvailable": 13
+}
+
+
+
+]

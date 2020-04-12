@@ -3,6 +3,9 @@ import dataAW from './AgeWeight.json';
 import dataTH from './TaskHours.json';
 import Table from "./table";
 import TablesTest from './tablesTest';
+import TablePlentiful from './tablePlentiful';
+//import SearchBarGeneral from './searchBarGeneral';
+import TopBar from "./topBar"
 
 import { Chart } from "react-google-charts";
 
@@ -275,66 +278,17 @@ function App() {
 			<form>
 			<h1>Home</h1>
 			<div>
-				<label>First Name </label>
+				<label>Username </label>
 				<input type='text'/>
 			</div>
 			<div>
-				<label>Middle Name </label>
+				<label>Password </label>
 				<input type='text'/>
-			</div>
-			<div>
-				<label>Last Name </label>
-				<input type='text'/>
-			</div>
-			<div>
-				<label>Address </label>
-				<input type='text'/>
-			</div>
-			<div>
-				<label>What is your family size? </label>
-				<select>
-				<option value="1"> 1</option>
-				<option value="2"> 2</option>
-				<option value="3"> 3</option>
-				<option value="4"> 4</option>
-				<option value="5"> 5</option>
-				
-				
-				
-				//tagged with dairy,meat,fish,etc.
-				//maybe above list is list of tags of products (ex:dole's cut pinapple=canned fruits,displays fruit after selection)
-				
-			</select>
 			</div>
 			
-					<div>
-			<label>Select your income level</label>
-			<select>
-				<option value="10,000"> Less than 10,0000</option>
-				<option value="10,000"> 10,0000-15,0000</option>
-				<option value="10,000"> 15,000-20,0000</option>
-				<option value="10,000"> 20,000-25,0000</option>
-				<option value="10,000"> 25,000-30,0000</option>
-				<option value="10,000"> 30,000-35,0000</option>
-				<option value="10,000"> 35,000-40,0000</option>
-				
-				//tagged with dairy,meat,fish,etc.
-				//maybe above list is list of tags of products (ex:dole's cut pinapple=canned fruits,displays fruit after selection)
-				
-			</select>
-		
-		</div>
-			<div>
-				<label>Are you a resident of the Santa Clara County? </label>
-				<input type='checkbox'/>
-			</div>
-			<div>
-				<label>Is this your permanant address? </label>
-				<input type='checkbox'/>
-			</div>
 			</form>
 			
-			
+			<Link to="/dashHome"> DashBoard</Link>
 			
 			<Particles 
               params={particleOpt}
@@ -365,13 +319,23 @@ function App() {
 		()=>{
 			return (
 			<div>
+			<TopBar/>
 			<Link to="/dash1"> Dash 1</Link>
 			<Link to="/dash2"> Dash 2</Link>
 			<Link to="/dash3"> Dash 3</Link>
 			<Link to="/dash4"> Dash 4</Link>
+			
 			<div style={{ display: 'flex', maxWidth: 900 }}>
+			<h1> View 1</h1>
+			
+				
 			  <PieChartFoodType/>
 			  <ColumnChartBestDonors/>
+			  <div>
+					<input type="text" className="input" placeholder="Search..." />
+					<ul>...</ul>
+				</div>
+			  <h1> View 2</h1>
 			  <ColumnChartNumOrders/>
 			  
 			  
@@ -379,14 +343,36 @@ function App() {
 			  <div style={{ display: 'flex' }}>
 			  <PieChartMostDonatedFood/>
 			 
+			 <div>
+					<input type="text" className="input" placeholder="Search..." />
+					<ul>...</ul>
+				</div>
+			 
+			 
 			  </div>
+			
+			
 			
 			<div style={{ display: 'flex' }}>
 			
-			<PieChart/>
+			<h1> View 3</h1>
+			<div>
+					<input type="text" className="input" placeholder="Search..." />
+					<ul>...</ul>
+			</div>
+			 <TablePlentiful/>
+			 <TablePlentiful/>
+			<TablePlentiful/>
+			
+			<h1> View 4</h1>
 			 <ColumnChart/>
 			 <PieChart/>
+			
 			 <ColumnChartMostCommonlyOrdered/>
+			 <div>
+					<input type="text" className="input" placeholder="Search..." />
+					<ul>...</ul>
+				</div>
 			</div>
 			
 			
