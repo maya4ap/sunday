@@ -8,6 +8,7 @@ import TablePlentiful from './tablePlentiful';
 import TopBar from "./topBar"
 import LoginHome from './LoginHome';
 import JsonClass from './JsonClass';
+import JsonTwo from './JsonTwo';
 
 import { Chart } from "react-google-charts";
 
@@ -15,6 +16,7 @@ import './App.css';
 import Form from './Form';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Particles from 'react-particles-js';
+
 
 /*
 * Sunday
@@ -433,9 +435,10 @@ function App () {
 			
 			
 			<JsonClass/>
+      {/* <JsonTwo/>
 			
 			//<Table/>
-			<TablesTest/>
+			//<TablesTest/> */}
 			<Particles 
               params={particleOpt}
            
