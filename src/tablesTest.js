@@ -43,7 +43,7 @@ class table extends Component{
 		
           <TableRow>
             <TableCell>SwagCompID</TableCell>
-            <TableCell align="right">SwagCompName</TableCell>
+            <TableCell align="right">KitchenID</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -52,7 +52,7 @@ class table extends Component{
               <TableCell component="th" scope="row">
                 {apData.SwagCompID}
               </TableCell>
-              <TableCell align="right">{apData.SwagCompName}</TableCell>
+              <TableCell align="right">{this.props.kitchen.kitchen_name.S.toString()}</TableCell>
             </TableRow>
           ))}
 		    

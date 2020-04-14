@@ -48,7 +48,8 @@ class JsonClass extends Component{
 	
 	  <div>{this.state.kitchen.kitchen_name.S.toString()} </div>  
 	
-	 
+	  <TablesTest kitchen = {this.state.kitchen}
+	/>
 	
 	
 	</div>	
