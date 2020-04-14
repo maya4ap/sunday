@@ -27,14 +27,14 @@ class table extends Component{
 		
 	return(
 	<div>
-		<h1>Donate!!!~~~~~~</h1>
+		{/* <h1>Donate!!!~~~~~~</h1>
 		<h1>Donate</h1>
 		{apData.map( (dataDetail, index) => {
 										return <h1> {dataDetail.SwagCompID}</h1>
 									} 
 						
 						   )
-	}
+	} */}
 	
 	
 	<TableContainer component={Paper}>
@@ -42,17 +42,17 @@ class table extends Component{
         <TableHead>
 		
           <TableRow>
-            <TableCell>SwagCompID</TableCell>
-            <TableCell align="right">KitchenID</TableCell>
+            <TableCell>Kitchen ID</TableCell>
+            <TableCell align="right">Kitchen Name</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {apData.map(apData => (
-            <TableRow key={apData.SwagCompID}>
+          {this.props.kitchen.map(kitchen => (
+            <TableRow key={kitchen.kitchen_id.S}>
               <TableCell component="th" scope="row">
-                {apData.SwagCompID}
+                {kitchen.kitchen_id.S}
               </TableCell>
-              <TableCell align="right">{this.props.kitchen[0].kitchen_name.S.toString()}</TableCell>
+              <TableCell align="right">{kitchen.kitchen_name.S}</TableCell>
               {/* <TableCell align="right">{this.props.kitchen.kitchen_name.S.toString()}</TableCell> */}
             </TableRow>
           ))}

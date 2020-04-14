@@ -43,13 +43,13 @@ class JsonClass extends Component{
 
 	 
 		<p>
-			Hi
+			{/* Hi */}
 		</p>
 	
-		{this.state.kitchen.map(oneKitchen => (
+		{/* {this.state.kitchen.map(oneKitchen => (
 				<div>{oneKitchen.kitchen_name.S.toString()} </div>  
 		)
-		)}
+		)} */}
 	  
 	<TablesTest kitchen = {this.state.kitchen}/>
 	  {/* <TablesTest kitchen = {this.state.kitchen} />
