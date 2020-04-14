@@ -52,7 +52,8 @@ class table extends Component{
               <TableCell component="th" scope="row">
                 {apData.SwagCompID}
               </TableCell>
-              <TableCell align="right">{this.props.kitchen.kitchen_name.S.toString()}</TableCell>
+              <TableCell align="right">{this.props.kitchen[0].kitchen_name.S.toString()}</TableCell>
+              {/* <TableCell align="right">{this.props.kitchen.kitchen_name.S.toString()}</TableCell> */}
             </TableRow>
           ))}
 		    

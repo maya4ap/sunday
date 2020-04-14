@@ -8,7 +8,7 @@ class JsonClass extends Component{
 				super(props)
 				this.
 				state = {
-				kitchen: null
+				kitchen: []
 				};
 				
 			}
@@ -22,7 +22,7 @@ class JsonClass extends Component{
 			
 			console.log(jsonTemp.message);
 			console.log(jsonTemp.result[0].kitchen_name);
-			this.setState({kitchen: jsonTemp.result[0]});
+			this.setState({kitchen: jsonTemp.result});
 			console.log("state");
 			console.log(this.state.kitchen);
 			
@@ -34,7 +34,7 @@ class JsonClass extends Component{
 	} 
 	render(){
 
-		if(!this.state.kitchen){
+		if(!this.state.kitchen.length){
 			return <div>didnt get a kitchen</div>
 		}
 		return(
@@ -46,10 +46,15 @@ class JsonClass extends Component{
 			Hi
 		</p>
 	
-	  <div>{this.state.kitchen.kitchen_name.S.toString()} </div>  
+		{this.state.kitchen.map(oneKitchen => (
+				<div>{oneKitchen.kitchen_name.S.toString()} </div>  
+		)
+		)}
+	  
+	<TablesTest kitchen = {this.state.kitchen}/>
+	  {/* <TablesTest kitchen = {this.state.kitchen} />
+	  */}
 	
-	  <TablesTest kitchen = {this.state.kitchen}
-	/>
 	
 	
 	</div>	
