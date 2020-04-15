@@ -43,8 +43,11 @@ class GraphsOne extends Component{
 		
 	<h1>yooo</h1>
 	<PieChartFoodType/>
-	
-	
+	{this.props.chartData.map(chartData => (
+          
+			  <p> heyo</p>
+		   
+          ))}	
 	 
 	
 	
