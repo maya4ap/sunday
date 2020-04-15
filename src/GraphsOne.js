@@ -49,6 +49,22 @@ class GraphsOne extends Component{
 		   
           ))}	
 	 
+	 <Chart
+		width={'500px'}
+	height={'300px'}
+		chartType="BarChart"
+		loader={<div>Loading Chart</div>}
+        data={
+			this.props.chartData
+		}
+        options={{
+          chartArea: {
+            width: '50%',
+          },
+          title: 'EUR Price',
+        }}
+        rootProps={{ 'data-testid': '1' }}
+      />
 	
 	
 	</div>	
