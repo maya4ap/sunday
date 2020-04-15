@@ -16,6 +16,7 @@ import './App.css';
 import Form from './Form';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Particles from 'react-particles-js';
+import GraphsOne from './GraphsOne';
 
 
 /*
@@ -435,9 +436,10 @@ function App () {
 			
 			
 			<JsonClass/>
-      {/* <JsonTwo/>
+      <JsonTwo/>
+      {/* <GraphsOne/> */}
 			
-			//<Table/>
+		 {/*	//<Table/>
 			//<TablesTest/> */}
 			<Particles 
               params={particleOpt}
