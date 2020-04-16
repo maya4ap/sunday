@@ -20,11 +20,13 @@ class JsonTwo extends Component{
 			const responseTemp = await fetch ('https://phaqvwjbw6.execute-api.us-west-1.amazonaws.com/dev/api/v1/kitchens')
 			const jsonTemp = await responseTemp.json()
 			const keys = Object.keys(jsonTemp.result)
-			const values = Object.values(jsonTemp.result)
+			const values = Object.values(jsonTemp.result[0].kitchen_id)
+			console.log("blah bell");
+			console.log(jsonTemp.result[0].kitchen_id);
 			const chartDataA = [['Key', 'Value']]
 			console.log("first bit of chartData");
 			console.log(chartDataA);
-			for (let i = 0; i < keys.length; i += 1) {
+			for (let i = 1; i < keys.length; i += 1) {
 				chartDataA.push([keys[i], values[i]])
 			  }
 			console.log("second bit of chartData");
