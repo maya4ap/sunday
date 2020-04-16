@@ -21,13 +21,14 @@ class JsonTwo extends Component{
 			const jsonTemp = await responseTemp.json()
 			const keys = Object.keys(jsonTemp.result)
 			const values = Object.values(jsonTemp.result)
+			const keyTemp = ["s","t","r","i","n","g"]
 			console.log("blah bell");
 			console.log(jsonTemp.result[0].kitchen_id);
-			const chartDataA = [['Key', 'Value']]
+			const chartDataA = [["key", "val"]]
 			console.log("first bit of chartData");
 			console.log(chartDataA);
-			for (let i = 1; i < keys.length; i += 1) {
-				chartDataA.push([keys[i], values[i].kitchen_id.S])
+			for (let i = 0; i < values.length; i += 1) {
+				chartDataA.push([values[i].kitchen_name.S, parseInt(values[i].zipcode.S)])
 			  }
 			console.log("second bit of chartData");
 			console.log(chartDataA);
