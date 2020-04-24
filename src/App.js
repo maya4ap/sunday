@@ -9,7 +9,8 @@ import TopBar from "./topBar"
 import LoginHome from './LoginHome';
 import JsonClass from './JsonClass';
 import JsonTwo from './JsonTwo';
-
+import JsonThree from './graphsTest/JsonThree';
+import JsonGenerousDonors from './GenerousDonors/JsonGenerousDonors'
 import { Chart } from "react-google-charts";
 
 import './App.css';
@@ -17,6 +18,7 @@ import Form from './Form';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Particles from 'react-particles-js';
 import GraphsOne from './GraphsOne';
+
 
 
 /*
@@ -333,7 +335,9 @@ function App () {
 			
 				
 			  <PieChartFoodType/>
-			  <ColumnChartBestDonors/>
+        {/* <JsonTwo/> */}
+        <JsonGenerousDonors/>
+			  {/* <ColumnChartBestDonors/> */}
 			  <div>
 					<input type="text" className="input" placeholder="Search..." />
 					<ul>...</ul>
@@ -455,13 +459,14 @@ function App () {
 			return (
 			<div>
 			
-			{
+      <JsonThree/>
+			{/* {
 				dataAW.map( (dataDetail, index) => {
 										return <h1> {dataDetail.Age}</h1>
 									} 
 						
 						   )
-			}
+			} */}
 			
 			<Particles 
               params={particleOpt}

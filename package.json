@@ -2,6 +2,7 @@
   "name": "sunday",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://8fkhwyxrsj.execute-api.us-west-1.amazonaws.com/dev/inventory-status",
   "dependencies": {
     "@material-ui/core": "^4.9.9",
     "@material-ui/icons": "^4.9.1",

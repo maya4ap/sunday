@@ -1,8 +1,8 @@
 import React, {Component } from 'react'
-import TablesTest from './tablesTest';
-import GraphsOne from './GraphsOne';
+//import TablesTest from './tablesTest';
+import GraphsGenerousDonors from './GraphsGenerousDonors';
 
-class JsonTwo extends Component{
+class JsonGenerousDonors extends Component{
 		
 		constructor(props)	
 			{
@@ -54,7 +54,7 @@ class JsonTwo extends Component{
 		return(
 	
 	<div>
-		<GraphsOne chartData = {this.state.chartData}/>
+		<GraphsGenerousDonors chartData = {this.state.chartData}/>
 	 
 		
 	
@@ -63,7 +63,7 @@ class JsonTwo extends Component{
 	}
 }
 
-export default JsonTwo;
+export default JsonGenerousDonors;
 
 
 	

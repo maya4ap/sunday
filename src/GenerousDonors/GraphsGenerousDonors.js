@@ -33,7 +33,7 @@ const PieChartFoodType = () => {
 	);
   };
 
-class GraphsOne extends Component{
+class GraphsGenerousDonors extends Component{
 	
 	
 	render(){
@@ -48,7 +48,27 @@ class GraphsOne extends Component{
 			  <p> heyo</p>
 		   
           ))}	 */}
-	 
+
+<Chart
+    width={400}
+    height={300}
+    chartType="ColumnChart"
+    loader={<div>Loading Chart</div>}
+    data={this.props.chartData}
+    options={{
+      title: 'Number of Orders Donated',
+      chartArea: { width: '80%' },
+      hAxis: {
+        title: 'Who Donated More?',
+        minValue: 0,
+      },
+      vAxis: {
+        title: 'Donation Vale',
+      },
+    }}
+    legendToggle
+  />
+{/* 	 
 	 <Chart
 		width={'500px'}
 	height={'300px'}
@@ -65,11 +85,11 @@ class GraphsOne extends Component{
         }}
         rootProps={{ 'data-testid': '1' }}
       />
-	
+	 */}
 	
 	</div>	
 		)
 	}
 }
 
-export default GraphsOne;
+export default GraphsGenerousDonors;

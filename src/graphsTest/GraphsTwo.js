@@ -1,5 +1,6 @@
 import React, {Component } from 'react'
 import { Chart } from "react-google-charts";
+import Sample from "./sample.json";
 
 
 const PieChartFoodType = () => {
@@ -33,7 +34,7 @@ const PieChartFoodType = () => {
 	);
   };
 
-class GraphsOne extends Component{
+class GraphsTwo extends Component{
 	
 	
 	render(){
@@ -41,13 +42,13 @@ class GraphsOne extends Component{
 	return(
 	<div>
 		
-	{/* <h1>yooo</h1> */}
-	{/* <PieChartFoodType/> */}
-	{/* {this.props.chartData.map(chartData => (
+	<h1>yooo</h1>
+	<PieChartFoodType/>
+	{this.props.chartData.map(chartData => (
           
 			  <p> heyo</p>
 		   
-          ))}	 */}
+          ))}	
 	 
 	 <Chart
 		width={'500px'}
@@ -72,4 +73,4 @@ class GraphsOne extends Component{
 	}
 }
 
-export default GraphsOne;
+export default GraphsTwo;

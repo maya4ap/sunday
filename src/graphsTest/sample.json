@@ -1,0 +1,206 @@
+[
+  {
+    "week_affected": "2020-05-30",
+    "meal_selected": "700-000008",
+    "meal_name": "Bok n Broc Soup",
+    "total": 4
+  },
+  {
+    "week_affected": "2020-05-30",
+    "meal_selected": "700-000012",
+    "meal_name": "Buddha Bowl",
+    "total": 4
+  },
+  {
+    "week_affected": "2020-05-30",
+    "meal_selected": "700-000027",
+    "meal_name": "Cobb Salad w/ Vegan Ranch",
+    "total": 4
+  },
+  {
+    "week_affected": "2020-05-30",
+    "meal_selected": "700-000032",
+    "meal_name": "Credo Nachos",
+    "total": 4
+  },
+  {
+    "week_affected": "2020-05-30",
+    "meal_selected": "700-000093",
+    "meal_name": "Savory Sweet Mashers w/ Collards & Swiss Chard",
+    "total": 4
+  },
+  {
+    "week_affected": "2020-05-23",
+    "meal_selected": "SKIP",
+    "meal_name": "NULL",
+    "total": 3
+  },
+  {
+    "week_affected": "2020-05-16",
+    "meal_selected": "700-000017",
+    "meal_name": "Caesar Salad",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-05-16",
+    "meal_selected": "700-000018",
+    "meal_name": "Cashew Alfredo Pasta",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-05-16",
+    "meal_selected": "700-000058",
+    "meal_name": "Kale Power Salad",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-05-16",
+    "meal_selected": "700-000061",
+    "meal_name": "Kung Pao Brussels",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-05-16",
+    "meal_selected": "700-000063",
+    "meal_name": "Lentil Soup",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-05-16",
+    "meal_selected": "SKIP",
+    "meal_name": "NULL",
+    "total": 2
+  },
+  {
+    "week_affected": "2020-05-09",
+    "meal_selected": "700-000026",
+    "meal_name": "Cilantro Goddess Salad",
+    "total": 9
+  },
+  {
+    "week_affected": "2020-05-09",
+    "meal_selected": "700-000091",
+    "meal_name": "Saag",
+    "total": 5
+  },
+  {
+    "week_affected": "2020-05-09",
+    "meal_selected": "700-000124",
+    "meal_name": "White Bean Kale Soup",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-05-09",
+    "meal_selected": "SKIP",
+    "meal_name": "NULL",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-05-02",
+    "meal_selected": "700-000006",
+    "meal_name": "BLT Pasta Salad",
+    "total": 2
+  },
+  {
+    "week_affected": "2020-05-02",
+    "meal_selected": "700-000010",
+    "meal_name": "Broccoli Cheez Soup",
+    "total": 7
+  },
+  {
+    "week_affected": "2020-05-02",
+    "meal_selected": "700-000013",
+    "meal_name": "Buffalo Cauliflower Bowl",
+    "total": 2
+  },
+  {
+    "week_affected": "2020-05-02",
+    "meal_selected": "700-000021",
+    "meal_name": "Chickpea Shawarma Salad",
+    "total": 7
+  },
+  {
+    "week_affected": "2020-05-02",
+    "meal_selected": "700-000029",
+    "meal_name": "Coconut Cardamom Oats w/ Strawberry Jam",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-05-02",
+    "meal_selected": "700-000078",
+    "meal_name": "Peanut Chop Salad",
+    "total": 1
+  },
+  {
+    "week_affected": "2020-04-25",
+    "meal_selected": "700-000070",
+    "meal_name": "Minestrone Soup",
+    "total": 8
+  },
+  {
+    "week_affected": "2020-04-25",
+    "meal_selected": "700-000078",
+    "meal_name": "Peanut Chop Salad",
+    "total": 6
+  },
+  {
+    "week_affected": "2020-04-25",
+    "meal_selected": "700-000112",
+    "meal_name": "Thai Green Curry 2",
+    "total": 6
+  },
+  {
+    "week_affected": "2020-04-25",
+    "meal_selected": "700-000114",
+    "meal_name": "Tofu Scramble",
+    "total": 6
+  },
+  {
+    "week_affected": "2020-04-25",
+    "meal_selected": "700-000121",
+    "meal_name": "Walnut Lentil Taco Salad",
+    "total": 9
+  },
+  {
+    "week_affected": "2020-04-18",
+    "meal_selected": "700-000029",
+    "meal_name": "Coconut Cardamom Oats w/ Strawberry Jam",
+    "total": 2
+  },
+  {
+    "week_affected": "2020-04-18",
+    "meal_selected": "700-000054",
+    "meal_name": "Hot and Sour Soup",
+    "total": 6
+  },
+  {
+    "week_affected": "2020-04-18",
+    "meal_selected": "700-000078",
+    "meal_name": "Peanut Chop Salad",
+    "total": 5
+  },
+  {
+    "week_affected": "2020-04-18",
+    "meal_selected": "700-000096",
+    "meal_name": "Shaved Kale & Brussel Salad",
+    "total": 6
+  },
+  {
+    "week_affected": "2020-04-18",
+    "meal_selected": "700-000101",
+    "meal_name": "Spicy BBQ Pulled Pork",
+    "total": 5
+  },
+  {
+    "week_affected": "2020-04-18",
+    "meal_selected": "700-000112",
+    "meal_name": "Thai Green Curry 2",
+    "total": 6
+  },
+  {
+    "week_affected": "2020-04-18",
+    "meal_selected": "SKIP",
+    "meal_name": "NULL",
+    "total": 1
+  }
+]
