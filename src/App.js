@@ -11,6 +11,7 @@ import JsonClass from './JsonClass';
 import JsonTwo from './JsonTwo';
 import JsonThree from './graphsTest/JsonThree';
 import JsonGenerousDonors from './GenerousDonors/JsonGenerousDonors'
+import JsonMonthOrders from './MonthOrders/JsonMonthOrders'
 import { Chart } from "react-google-charts";
 
 import './App.css';
@@ -343,8 +344,8 @@ function App () {
 					<ul>...</ul>
 				</div>
 			  <h1> View 2</h1>
-			  <ColumnChartNumOrders/>
-			  
+			  {/* <ColumnChartNumOrders/> */}
+			  <JsonMonthOrders/>
 			  
 			  </div>
 			  <div style={{ display: 'flex' }}>
