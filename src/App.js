@@ -20,7 +20,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Particles from 'react-particles-js';
 import GraphsOne from './GraphsOne';
 
-
+import FilterTest from './FilterTest'
 
 /*
 * Sunday
@@ -468,7 +468,7 @@ function App () {
 						
 						   )
 			} */}
-			
+			<FilterTest/>
 			<Particles 
               params={particleOpt}
            

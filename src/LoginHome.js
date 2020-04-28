@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
+import JsonGenerousDonors from "./GenerousDonors/JsonGenerousDonors";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -14,6 +15,13 @@ export default function Login() {
     event.preventDefault();
   }
 
+  function consoleLog(){
+   
+    console.log("whattup");
+    console.log(email); 
+   
+  }
+
   return (
     <div className="Login">
 	<h1>Home</h1>
@@ -24,8 +32,12 @@ export default function Login() {
             autoFocus
             type="email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value) 
+              
+            }
+            
           />
+          
         </FormGroup>
         <FormGroup controlId="password" bsSize="large">
           <ControlLabel>Password</ControlLabel>
@@ -37,8 +49,20 @@ export default function Login() {
         </FormGroup>
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Login
+
+          {/* onClick = { () => {
+              setEmail(currentEmail)           
+          }
+
+          } */}
         </Button>
       </form>
+      {consoleLog()}
+
+      <JsonGenerousDonors email={email} />
+      {}
     </div>
   );
 }
+
+//convert from functional to state and pass in the state as a prop

@@ -29,8 +29,10 @@ class JsonMonthOrders extends Component{
 			const chartDataA = [["key", "val"]]
 			console.log("first bit of chartData");
 			console.log(chartDataA);
-			for (let i = 0; i < values.length; i += 1) {
+			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
 				chartDataA.push([jsonTemp.result.result[i].Month, parseInt(jsonTemp.result.result[i].TotalOrders)])
+				console.log("foodbank is");
+				console.log(jsonTemp.result.result[i].foodbank_id);
 			  }
 			console.log("second bit of chartData");
 			console.log(chartDataA);
