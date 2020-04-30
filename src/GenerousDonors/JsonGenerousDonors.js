@@ -9,13 +9,35 @@ class JsonGenerousDonors extends Component{
 				super(props)
 				this.
 				state = {
-				chartData: []
+				chartData: [],
+				pass: props.pass
 				};
 				
 			}
         
-            //pass in login user-id from state and have if(this.state.id = ...) then push
-	componentDidMount = () => 
+			//pass in login user-id from state and have if(this.state.id = ...) then push
+	onFuncTwo()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000002"
+		})
+		console.log(this.state.pass);
+	}
+
+	onFuncThree()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000003"
+		})
+		console.log(this.state.pass);
+	}
+
+	
+	onDefault = () => 
 	{
 		const jsonStuff = async() => {
 			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/donordonation')
@@ -37,7 +59,7 @@ class JsonGenerousDonors extends Component{
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
-				if(jsonTemp.result.result[i].foodbank_id == "800-000001")
+				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
 				chartDataA.push([jsonTemp.result.result[i].donor_id, parseInt(jsonTemp.result.result[i].totalDonation)])
 			  }
 			console.log("second bit of chartData");
@@ -62,8 +84,9 @@ class JsonGenerousDonors extends Component{
 		return(
 	
 	<div>
-        <h1> Hello,{this.props.email}</h1>
-
+        <h1> Hey,{this.props.pass}</h1>
+		<button onClick={() => this.onFuncTwo(),this.onDefault()} className="btn btn-primary">Choose 800-000002</button>
+		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<div>
 				<label>Which FoodBanl? </label>
 				<select>
@@ -92,5 +115,3 @@ class JsonGenerousDonors extends Component{
 //get ID and only populate it with matching info
 export default JsonGenerousDonors;
 
-
-	

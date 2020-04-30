@@ -41,7 +41,7 @@ class GraphsTwo extends Component{
 		
 	return(
 	<div>
-		<h1> Hey, {this.props.value}</h1>
+		{/* <h1> Hey, {this.props.value}</h1> */}
 	{/* <h1>yooo</h1> */}
 	{/* <PieChartFoodType/> */}
 	{/* {this.props.chartData.map(chartData => (
