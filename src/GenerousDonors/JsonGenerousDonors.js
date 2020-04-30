@@ -36,9 +36,18 @@ class JsonGenerousDonors extends Component{
 		console.log(this.state.pass);
 	}
 
-	chartFiter(){}
-	
-	componentDidMount = () => 
+	chartFiter(){
+		// var array = [this.state.chartData]; // make a separate copy of the array
+  		// //var index = array.indexOf(e.target.value)
+  		// //if (index !== -1) {
+    	// 	array.splice(4, 1);
+		// this.setState({chartData: array});
+		// console.log("chartFilter chartData");
+		// console.log(this.state.chartData);
+  		//}
+	}
+	//maybe pass props from filter test
+	onDefault = () => 
 	{
 		const jsonStuff = async() => {
 			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/donordonation')
@@ -60,7 +69,9 @@ class JsonGenerousDonors extends Component{
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
-				//if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
+				console.log("this.state.pass");
+				console.log(this.state.pass);
+				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
 				chartDataA.push([jsonTemp.result.result[i].donor_id, parseInt(jsonTemp.result.result[i].totalDonation)])
 			  }
 			console.log("second bit of chartData");
@@ -69,10 +80,10 @@ class JsonGenerousDonors extends Component{
 			this.setState({
 				chartData:chartDataA
 			})
-
+//
 			console.log("state");
 			console.log(this.state.chartData);
-
+{/* <button onClick={() => this.onFuncTwo(),this.chartFiter} className="btn btn-primary">Choose 800-000002</button> */}
 
 		
 }
@@ -86,25 +97,10 @@ class JsonGenerousDonors extends Component{
 	
 	<div>
         <h1> Hey,{this.props.pass}</h1>
-		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
+		
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
+		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Choose 800-000002</button>
 		<div>
-				<label>Which FoodBanl? </label>
-				<select>
-				<option value="800-000001"> 800-000001</option>
-				<option value="800-000002"> 800-000002</option>
-				<option value="800-000003"> 800-000003</option>
-				<option value="800-000004"> 800-000004</option>
-				<option value="800-000005"> 800-000005</option>
-				<option value="800-000006"> 800-000006</option>
-				<option value="800-000007"> 800-000007</option>
-				<option value="800-000008"> 800-000008</option>
-				<option value="800-000009"> 800-000009</option>
-				
-				
-				
-				
-			</select>
 			</div>
 
 		<GraphsGenerousDonors chartData = {this.state.chartData}/>	
