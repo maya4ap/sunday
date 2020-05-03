@@ -26,31 +26,12 @@ class FilterTest extends React.Component {
     //   <JsonGenerousDonors value = {this.state.value}/>
     }
 
-    onFuncTwo()
-    {
-      console.log("onFunc");
-      this.setState({
-        //pass: this.state.pass + 3
-        pass: "800-000002"
-      })
-      console.log(this.state.pass);
-    }
-  
-    onFuncThree()
-    {
-      console.log("onFunc");
-      this.setState({
-        //pass: this.state.pass + 3
-        pass: "800-000003"
-      })
-      console.log(this.state.pass);
-    }
+ 
   
     render() {
       return (
         <div>
-          <button onClick={() => this.onFuncTwo()} className="btn btn-primary">Chose 800-000002</button>
-		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Chose 800-000003</button>
+         
         <form onSubmit={this.handleSubmit}>
           <label>
             Pick a foodbank id:

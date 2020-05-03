@@ -1,9 +1,9 @@
 import React, {Component } from 'react'
 //import TablesTest from './tablesTest';
-import GraphsMonthOrders from './GraphsMonthOrders';
+import GraphsFoodTypes from './GraphsFoodTypes';
 
-class JsonMonthOrders extends Component{
-		
+class JsonFoodTypes extends Component{
+		//something is wrong!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		constructor(props)	
 			{
 				super(props)
@@ -94,10 +94,10 @@ class JsonMonthOrders extends Component{
 				console.log(this.state.pass);
 			}		
 		
-	onDefault = () => 
+	componentDidMount = () => 
 	{
 		const jsonStuff = async() => {
-			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/orderstatus')
+			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/foodtypes')
 			.catch(error => console.log(error))
 			const jsonTemp = await responseTemp.json()
 			const keys = Object.keys(jsonTemp.result)
@@ -110,7 +110,7 @@ class JsonMonthOrders extends Component{
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
-				chartDataA.push([jsonTemp.result.result[i].Month, parseInt(jsonTemp.result.result[i].TotalOrders)])
+				chartDataA.push([jsonTemp.result.result[i].type, parseInt(jsonTemp.result.result[i].typeTotal)])
 				console.log("foodbank is");
 				console.log(jsonTemp.result.result[i].foodbank_id);
 			  }
@@ -146,7 +146,7 @@ class JsonMonthOrders extends Component{
 		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button>
 		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
 	
-		<GraphsMonthOrders chartData = {this.state.chartData}/>
+		<GraphsFoodTypes chartData = {this.state.chartData}/>
 	 
 		
 	
@@ -155,7 +155,7 @@ class JsonMonthOrders extends Component{
 	}
 }
 
-export default JsonMonthOrders;
+export default JsonFoodTypes;
 
 
 	
