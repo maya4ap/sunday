@@ -16,6 +16,16 @@ class JsonGenerousDonors extends Component{
 			}
         
 			//pass in login user-id from state and have if(this.state.id = ...) then push
+	
+			onFuncOne()
+			{
+				console.log("onFunc");
+				this.setState({
+					//pass: this.state.pass + 3
+					pass: "800-000001"
+				})
+				console.log(this.state.pass);
+			}
 	onFuncTwo()
 	{
 		console.log("onFunc");
@@ -160,7 +170,7 @@ class JsonGenerousDonors extends Component{
 		 //important prop pass test!!
 		 }
 
-		 
+<button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>

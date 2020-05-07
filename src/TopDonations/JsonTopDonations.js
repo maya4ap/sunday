@@ -14,6 +14,15 @@ class JsonTopDonations extends Component{
 				
 			}
 			
+			onFuncOne()
+			{
+				console.log("onFunc");
+				this.setState({
+					//pass: this.state.pass + 3
+					pass: "800-000001"
+				})
+				console.log(this.state.pass);
+			}
 			onFuncTwo()
 			{
 				console.log("onFunc");
@@ -137,6 +146,7 @@ class JsonTopDonations extends Component{
 		return(
 	
 	<div>
+		<button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
