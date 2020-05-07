@@ -311,7 +311,7 @@ function App () {
 		()=>{
 			return (
 			<div>
-			<Form/>
+			{/* <Form/> */}
 			
 			
 			<Particles 

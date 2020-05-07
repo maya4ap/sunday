@@ -59,7 +59,7 @@ export default function Login() {
       </form>
       {consoleLog()}
 
-      <JsonGenerousDonors email={email} />
+      {/* <JsonGenerousDonors email={email} /> */}
       {}
     </div>
   );
