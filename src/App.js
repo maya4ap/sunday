@@ -337,7 +337,7 @@ function App () {
 			<h1> View 1</h1>
 			
 				
-			  <PieChartFoodType/>
+			  {/* <PieChartFoodType/> */}
         <JsonFoodTypes/> 
         {/* <JsonTwo/> */}
         <JsonGenerousDonors/>
@@ -353,8 +353,8 @@ function App () {
 			  </div>
 			  <div style={{ display: 'flex' }}>
           <JsonTopDonations/>
-			  <PieChartMostDonatedFood/>
-			 
+			  {/* <PieChartMostDonatedFood/>
+			  */}
 			 <div>
 					<input type="text" className="input" placeholder="Search..." />
 					<ul>...</ul>

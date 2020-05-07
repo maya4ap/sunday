@@ -138,7 +138,7 @@ class JsonMonthOrders extends Component{
 		return(
 
 	<div>
-			<h1> HI</h1>
+			
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>

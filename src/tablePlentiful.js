@@ -27,7 +27,7 @@ class table extends Component{
 				super(props)
 				this.
 				state = {
-				chartData: [],
+				array: [],
 				pass: "800-000001"
 				};
 				
@@ -36,13 +36,21 @@ class table extends Component{
       componentDidMount = () => 
       {
         const jsonStuff = async() => {
-          const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/donordonation')
+          const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/excess')
           .catch(error => console.log(error))
           const jsonTemp = await responseTemp.json()
           const keys = Object.keys(jsonTemp.result)
           const values = Object.values(jsonTemp.result)
           const keyTemp = ["s","t","r","i","n","g"]
-          console.log("testtt");
+          console.log("tableExcess TEST");
+          console.log(jsonTemp.result.message);
+          console.log(jsonTemp.result.result[0]);
+          console.log(jsonTemp.result.result[0].foodbank_id);
+          for (let i = 0; i < jsonTemp.result.result.length; i += 1)
+          {
+            // console.log(jsonTemp.result.result.foodbank_id[0]);
+            const arrayA = [ ["Food BankID","bleh","bloh","bluh","blyh",] ]
+          }
     
                   
     }
