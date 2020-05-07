@@ -9,7 +9,8 @@ class JsonMonthOrders extends Component{
 				super(props)
 				this.
 				state = {
-				chartData: []
+				chartData: [],
+				pass: "800-000001"
 				};
 				
 			}
@@ -110,6 +111,7 @@ class JsonMonthOrders extends Component{
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
+				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
 				chartDataA.push([jsonTemp.result.result[i].Month, parseInt(jsonTemp.result.result[i].TotalOrders)])
 				console.log("foodbank is");
 				console.log(jsonTemp.result.result[i].foodbank_id);
@@ -134,8 +136,9 @@ class JsonMonthOrders extends Component{
 
 		
 		return(
-	
+
 	<div>
+			<h1> HI</h1>
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>

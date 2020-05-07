@@ -9,7 +9,8 @@ class JsonFoodTypes extends Component{
 				super(props)
 				this.
 				state = {
-				chartData: []
+				chartData: [],
+				pass:"800-000001"
 				};
 				
 			}
@@ -94,7 +95,7 @@ class JsonFoodTypes extends Component{
 				console.log(this.state.pass);
 			}		
 		
-	componentDidMount = () => 
+	onDefault = () => 
 	{
 		const jsonStuff = async() => {
 			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/foodtypes')
@@ -103,14 +104,14 @@ class JsonFoodTypes extends Component{
 			const keys = Object.keys(jsonTemp.result)
 			const values = Object.values(jsonTemp.result)
 			const keyTemp = ["s","t","r","i","n","g"]
-			console.log("testtt");
+			console.log("FOODTYPETEST");
 			console.log(jsonTemp.result.message);
-			console.log(jsonTemp.result.result[0].SwagCompName);
 			const chartDataA = [["key", "val"]]
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
-				chartDataA.push([jsonTemp.result.result[i].type, parseInt(jsonTemp.result.result[i].typeTotal)])
+				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
+				chartDataA.push([jsonTemp.result.result[i].type, jsonTemp.result.result[i].typetotal])
 				console.log("foodbank is");
 				console.log(jsonTemp.result.result[i].foodbank_id);
 			  }

@@ -94,7 +94,7 @@ class JsonTopDonations extends Component{
 				console.log(this.state.pass);
 			}		
 		
-	componentDidMount = () => 
+	onDefault = () => 
 	{
 		const jsonStuff = async() => {
 			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/topdonations')
@@ -110,6 +110,7 @@ class JsonTopDonations extends Component{
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
+				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
 				chartDataA.push([jsonTemp.result.result[i].foodID, parseInt(jsonTemp.result.result[i].TotalDonation)])
 				console.log("foodbank is");
 				console.log(jsonTemp.result.result[i].foodbank_id);

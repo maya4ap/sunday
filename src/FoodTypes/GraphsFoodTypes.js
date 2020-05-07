@@ -41,13 +41,13 @@ class GraphsFoodTypes extends Component{
 	return(
 	<div>
 		
-	{/* <h1>yooo</h1> */}
+	 {/* <h1>yooo</h1>  */}
 	{/* <PieChartFoodType/> */}
-	{/* {this.props.chartData.map(chartData => (
+	 {/* {this.props.chartData.map(chartData => (
           
 			  <p> heyo</p>
 		   
-          ))}	 */}
+          ))}	  */}
 
 <Chart
     width={800}
@@ -56,7 +56,7 @@ class GraphsFoodTypes extends Component{
     loader={<div>Loading Chart</div>}
     data={this.props.chartData}
     options={{
-      title: 'Top Donated Foods',
+      title: 'Food Types',
       chartArea: { width: '80%' },
       hAxis: {
         title: 'FoodID',

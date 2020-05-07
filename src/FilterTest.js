@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import GraphsTwo from './graphsTest/GraphsTwo';
 import JsonThree from './graphsTest/JsonThree';
 import JsonGenerousDonors from './GenerousDonors/JsonGenerousDonors';
+import JsonMonthOrders from './MonthOrders/JsonMonthOrders'
 
 class FilterTest extends React.Component {
     constructor(props) {
@@ -52,6 +53,7 @@ class FilterTest extends React.Component {
         
         {/* <JsonGenerousDonors onSubmt = {this.handleSubmit}/> */}
         <JsonGenerousDonors pass = {this.state.value}/>
+        <JsonMonthOrders pass2 = {this.state.value}/>
 
    
     

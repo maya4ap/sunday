@@ -338,7 +338,7 @@ function App () {
 			
 				
 			  <PieChartFoodType/>
-        {/* <JsonFoodTypes/> */}
+        <JsonFoodTypes/> 
         {/* <JsonTwo/> */}
         <JsonGenerousDonors/>
 			  {/* <ColumnChartBestDonors/> */}
