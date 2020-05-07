@@ -1,8 +1,7 @@
 import React, {Component } from 'react'
 import { Chart } from "react-google-charts";
-import Sample from "./sample.json";
 
-
+//something is wrong!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const PieChartFoodType = () => {
 	return (
 	
@@ -34,22 +33,42 @@ const PieChartFoodType = () => {
 	);
   };
 
-class GraphsTwo extends Component{
+class GraphsFoodTypes extends Component{
 	
 	
 	render(){
 		
 	return(
 	<div>
-		{/* <h1> Hey, {this.props.value}</h1> */}
-	{/* <h1>yooo</h1> */}
+		
+	 {/* <h1>yooo</h1>  */}
 	{/* <PieChartFoodType/> */}
-	{/* {this.props.chartData.map(chartData => (
+	 {/* {this.props.chartData.map(chartData => (
           
 			  <p> heyo</p>
 		   
-          ))}	
-	  */}
+          ))}	  */}
+
+<Chart
+    width={800}
+    height={600}
+    chartType="PieChart"
+    loader={<div>Loading Chart</div>}
+    data={this.props.chartData}
+    options={{
+      title: 'Food Types',
+      chartArea: { width: '80%' },
+      hAxis: {
+        title: 'FoodID',
+        minValue: 0,
+      },
+      vAxis: {
+        title: 'Donations',
+      },
+    }}
+    legendToggle
+  />
+{/* 	 
 	 <Chart
 		width={'500px'}
 	height={'300px'}
@@ -66,11 +85,11 @@ class GraphsTwo extends Component{
         }}
         rootProps={{ 'data-testid': '1' }}
       />
-	
+	 */}
 	
 	</div>	
 		)
 	}
 }
 
-export default GraphsTwo;
+export default GraphsFoodTypes;

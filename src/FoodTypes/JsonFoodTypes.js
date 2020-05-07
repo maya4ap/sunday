@@ -1,16 +1,16 @@
 import React, {Component } from 'react'
 //import TablesTest from './tablesTest';
-import GraphsMonthOrders from './GraphsMonthOrders';
+import GraphsFoodTypes from './GraphsFoodTypes';
 
-class JsonMonthOrders extends Component{
-		
+class JsonFoodTypes extends Component{
+		//something is wrong!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		constructor(props)	
 			{
 				super(props)
 				this.
 				state = {
 				chartData: [],
-				pass: "800-000001"
+				pass:"800-000001"
 				};
 				
 			}
@@ -98,21 +98,20 @@ class JsonMonthOrders extends Component{
 	onDefault = () => 
 	{
 		const jsonStuff = async() => {
-			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/orderstatus')
+			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/foodtypes')
 			.catch(error => console.log(error))
 			const jsonTemp = await responseTemp.json()
 			const keys = Object.keys(jsonTemp.result)
 			const values = Object.values(jsonTemp.result)
 			const keyTemp = ["s","t","r","i","n","g"]
-			console.log("testtt");
+			console.log("FOODTYPETEST");
 			console.log(jsonTemp.result.message);
-			console.log(jsonTemp.result.result[0].SwagCompName);
 			const chartDataA = [["key", "val"]]
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
 				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
-				chartDataA.push([jsonTemp.result.result[i].Month, parseInt(jsonTemp.result.result[i].TotalOrders)])
+				chartDataA.push([jsonTemp.result.result[i].type, jsonTemp.result.result[i].typetotal])
 				console.log("foodbank is");
 				console.log(jsonTemp.result.result[i].foodbank_id);
 			  }
@@ -136,9 +135,8 @@ class JsonMonthOrders extends Component{
 
 		
 		return(
-
+	
 	<div>
-			<h1> HI</h1>
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
@@ -149,7 +147,7 @@ class JsonMonthOrders extends Component{
 		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button>
 		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
 	
-		<GraphsMonthOrders chartData = {this.state.chartData}/>
+		<GraphsFoodTypes chartData = {this.state.chartData}/>
 	 
 		
 	
@@ -158,7 +156,7 @@ class JsonMonthOrders extends Component{
 	}
 }
 
-export default JsonMonthOrders;
+export default JsonFoodTypes;
 
 
 	

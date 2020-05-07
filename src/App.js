@@ -12,6 +12,8 @@ import JsonTwo from './JsonTwo';
 import JsonThree from './graphsTest/JsonThree';
 import JsonGenerousDonors from './GenerousDonors/JsonGenerousDonors'
 import JsonMonthOrders from './MonthOrders/JsonMonthOrders'
+import JsonTopDonations from './TopDonations/JsonTopDonations'
+import JsonFoodTypes from './FoodTypes/JsonFoodTypes'
 import { Chart } from "react-google-charts";
 
 import './App.css';
@@ -336,6 +338,7 @@ function App () {
 			
 				
 			  <PieChartFoodType/>
+        <JsonFoodTypes/> 
         {/* <JsonTwo/> */}
         <JsonGenerousDonors/>
 			  {/* <ColumnChartBestDonors/> */}
@@ -349,6 +352,7 @@ function App () {
 			  
 			  </div>
 			  <div style={{ display: 'flex' }}>
+          <JsonTopDonations/>
 			  <PieChartMostDonatedFood/>
 			 
 			 <div>

@@ -9,13 +9,104 @@ class JsonGenerousDonors extends Component{
 				super(props)
 				this.
 				state = {
-				chartData: []
+				chartData: [],
+				pass: props.pass
 				};
 				
 			}
         
-            //pass in login user-id from state and have if(this.state.id = ...) then push
-	componentDidMount = () => 
+			//pass in login user-id from state and have if(this.state.id = ...) then push
+	onFuncTwo()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000002"
+		})
+		console.log(this.state.pass);
+	}
+
+	onFuncThree()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000003"
+		})
+		console.log(this.state.pass);
+	}
+
+	onFuncFour()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000004"
+		})
+		console.log(this.state.pass);
+	}
+
+	onFuncFive()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000005"
+		})
+		console.log(this.state.pass);
+	}
+
+	onFuncSix()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000005"
+		})
+		console.log(this.state.pass);
+	}
+
+	onFuncSeven()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000007"
+		})
+		console.log(this.state.pass);
+	}
+
+	onFuncEight()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000008"
+		})
+		console.log(this.state.pass);
+	}
+
+	onFuncNine()
+	{
+		console.log("onFunc");
+		this.setState({
+			//pass: this.state.pass + 3
+			pass: "800-000009"
+		})
+		console.log(this.state.pass);
+	}
+	chartFiter(){
+		// var array = [this.state.chartData]; // make a separate copy of the array
+  		// //var index = array.indexOf(e.target.value)
+  		// //if (index !== -1) {
+    	// 	array.splice(4, 1);
+		// this.setState({chartData: array});
+		// console.log("chartFilter chartData");
+		// console.log(this.state.chartData);
+  		//}
+	}
+	//maybe pass props from filter test
+	onDefault = () => 
 	{
 		const jsonStuff = async() => {
 			const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/donordonation')
@@ -37,7 +128,9 @@ class JsonGenerousDonors extends Component{
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
-				if(jsonTemp.result.result[i].foodbank_id == "800-000001")
+				console.log("this.state.pass");
+				console.log(this.state.pass);
+				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
 				chartDataA.push([jsonTemp.result.result[i].donor_id, parseInt(jsonTemp.result.result[i].totalDonation)])
 			  }
 			console.log("second bit of chartData");
@@ -46,10 +139,10 @@ class JsonGenerousDonors extends Component{
 			this.setState({
 				chartData:chartDataA
 			})
-
+//
 			console.log("state");
 			console.log(this.state.chartData);
-
+{/* <button onClick={() => this.onFuncTwo(),this.chartFiter} className="btn btn-primary">Choose 800-000002</button> */}
 
 		
 }
@@ -62,25 +155,22 @@ class JsonGenerousDonors extends Component{
 		return(
 	
 	<div>
-        <h1> Hello,{this.props.email}</h1>
+        {/* <h1> Hey,{this.props.pass}</h1>
+		 */
+		 //important prop pass test!!
+		 }
 
+		 
+		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
+		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
+		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
+		<button onClick={() => this.onFuncFive()} className="btn btn-primary">Choose 800-000005</button>
+		<button onClick={() => this.onFuncSix()} className="btn btn-primary">Choose 800-000006</button>
+		<button onClick={() => this.onFuncSeven()} className="btn btn-primary">Choose 800-000007</button>
+		<button onClick={() => this.onFuncEight()} className="btn btn-primary">Choose 800-000008</button>
+		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button>
+		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
 		<div>
-				<label>Which FoodBanl? </label>
-				<select>
-				<option value="800-000001"> 800-000001</option>
-				<option value="800-000002"> 800-000002</option>
-				<option value="800-000003"> 800-000003</option>
-				<option value="800-000004"> 800-000004</option>
-				<option value="800-000005"> 800-000005</option>
-				<option value="800-000006"> 800-000006</option>
-				<option value="800-000007"> 800-000007</option>
-				<option value="800-000008"> 800-000008</option>
-				<option value="800-000009"> 800-000009</option>
-				
-				
-				
-				
-			</select>
 			</div>
 
 		<GraphsGenerousDonors chartData = {this.state.chartData}/>	
@@ -92,5 +182,3 @@ class JsonGenerousDonors extends Component{
 //get ID and only populate it with matching info
 export default JsonGenerousDonors;
 
-
-	
