@@ -50,8 +50,8 @@ class GraphsGenerousDonors extends Component{
           ))}	 */}
 
 <Chart
-    width={400}
-    height={300}
+    width={800}
+    height={600}
     chartType="ColumnChart"
     loader={<div>Loading Chart</div>}
     data={this.props.chartData}

@@ -28,10 +28,17 @@ class table extends Component{
 				this.
 				state = {
 				array: [],
-				pass: "800-000001"
+        pass: "800-000001",
+        i:0
 				};
 				
-			}
+      }
+      
+      inc(){
+        this.state.i+=1;
+        console.log("is is");
+        console.log(this.state.i);
+      }
   
       componentDidMount = () => 
       {
@@ -46,11 +53,40 @@ class table extends Component{
           console.log(jsonTemp.result.message);
           console.log(jsonTemp.result.result[0]);
           console.log(jsonTemp.result.result[0].foodbank_id);
+         // const arrayA = [ ["foodBankID","foodbankName","foodID","item","averageOrder","quantity","excess"] ]
+         const arrayA =[]
+        //  =[jsonTemp.result.result[5].foodbank_id,
+        //   jsonTemp.result.result[5].foodbank_name,
+        //    jsonTemp.result.result[5].food_id,
+        //    jsonTemp.result.result[5].item,
+        //    jsonTemp.result.result[5].averageOrder,
+        //    jsonTemp.result.result[5].qty,
+        //    jsonTemp.result.result[5].excess]
           for (let i = 0; i < jsonTemp.result.result.length; i += 1)
           {
             // console.log(jsonTemp.result.result.foodbank_id[0]);
-            const arrayA = [ ["Food BankID","bleh","bloh","bluh","blyh",] ]
+           
+           
+            arrayA.push([jsonTemp.result.result[i].foodbank_id,
+               jsonTemp.result.result[i].foodbank_name,
+                jsonTemp.result.result[i].food_id,
+                jsonTemp.result.result[i].item,
+                jsonTemp.result.result[i].averageOrder,
+                jsonTemp.result.result[i].qty,
+                jsonTemp.result.result[i].excess])
+          
+        //  arrayA.push([jsonTemp.result.result[i]]);
+            
           }
+
+          this.setState({
+            array:arrayA
+          })
+
+          console.log("table array state");
+      console.log(this.state.array);
+      console.log("one elment");
+			console.log(this.state.array[1][3]);
     
                   
     }
@@ -62,8 +98,8 @@ class table extends Component{
 	return(
 	<div>
 		<h1> Table </h1>
-		{foodP.map( (dataDetail, index) => {
-										return <h1> {"\n\n\n"}</h1>
+		{this.state.array.map( (dataDetail, index) => {
+										return <h1> {"m\n\n\n"} {index}</h1>
 									} 
 						
 						   )
@@ -82,15 +118,19 @@ class table extends Component{
           </TableRow>
         </TableHead>
         <TableBody>
-          {foodP.map(foodP => (
-            <TableRow key={foodP.FoodID}>
+
+          {this.state.array.map(foodP => (
+            
+           
+            <TableRow key={this.state.array[0]}>
               <TableCell component="th" scope="row">
                 {foodP.FoodID}
               </TableCell>
-              <TableCell align="right">{foodP.CommonName}</TableCell>
-			  <TableCell align="right">{foodP.ExpirationDate}</TableCell>
+              <TableCell align="right">{this.state.array[0][3]}</TableCell>
+			  <TableCell align="right">{this.state.array[this.state.i][4]}</TableCell>
 			  <TableCell align="right">{foodP.NumberAvailable}</TableCell>
             </TableRow>
+           
           ))}
 		    
 		  
