@@ -120,7 +120,7 @@ class JsonCustomerValue extends Component{
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
 				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
-				chartDataA.push([jsonTemp.result.result[i].user_id, jsonTemp.result.result[i].Total_Value])
+				chartDataA.push([jsonTemp.result.result[i].first_name+" "+ jsonTemp.result.result[i].last_name, jsonTemp.result.result[i].Total_Value])
 				console.log("foodbank is");
 				console.log(jsonTemp.result.result[i].foodbank_id);
 			  }
