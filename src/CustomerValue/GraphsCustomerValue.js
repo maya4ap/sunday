@@ -56,7 +56,7 @@ class GraphsCustomerValue extends Component{
     loader={<div>Loading Chart</div>}
     data={this.props.chartData}
     options={{
-      title: 'Customer Order Value',
+      title: 'Which Customer Purchased More?',
       chartArea: { width: '80%' },
       hAxis: {
         title: 'Best Customers',

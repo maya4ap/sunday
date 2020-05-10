@@ -43,6 +43,8 @@ class table extends Component{
       componentDidMount = () => 
       {
         const jsonStuff = async() => {
+          console.log("foodP");
+          console.log(foodP);
           const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/excess')
           .catch(error => console.log(error))
           const jsonTemp = await responseTemp.json()
@@ -98,12 +100,12 @@ class table extends Component{
 	return(
 	<div>
 		<h1> Table </h1>
-		{this.state.array.map( (dataDetail, index) => {
+		{/* {this.state.array.map( (_dataDetail, index) => {
 										return <h1> {"m\n\n\n"} {index}</h1>
 									} 
 						
 						   )
-	}
+	} */}
 	
 	
 	<TableContainer component={Paper}>
@@ -112,35 +114,35 @@ class table extends Component{
 		
           <TableRow>
             <TableCell>FoodID</TableCell>
-            <TableCell align="right">CommonName</TableCell>
-			<TableCell align="right">Expiration Date</TableCell>
+            <TableCell align="right">Common Name</TableCell>
+			<TableCell align="right">Average Order</TableCell>
 			<TableCell align="right">Number Available</TableCell>
-      <TableCell align="right">Excess</TableCell>
+      <TableCell align="right">Number of Excess</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
 
-          {this.state.array.map(foodP => (
+          {this.state.array.map(foodP=> (
             
            
             <TableRow key={this.state.array[0][2]}>
               <TableCell component="th" scope="row">
                 {this.state.array[0][2]}
               </TableCell>
-              <TableCell align="right">{this.state.array[0][3]}</TableCell>
-			  <TableCell align="right">{this.state.array[this.state.i][4]}</TableCell>
-        <TableCell align="right">{this.state.array[this.state.i][5]}</TableCell>
-			  <TableCell align="right">{this.state.array[this.state.i][6]}</TableCell>
+              <TableCell align="right">{foodP[3]}</TableCell>
+			  <TableCell align="right">{foodP[4]}</TableCell>
+        <TableCell align="right">{foodP[5]}</TableCell>
+			  <TableCell align="right">{foodP[6]}</TableCell>
             </TableRow>
            
           ))}
 		    
 		  
-		  <TableRow>
+		  {/* <TableRow>
             <TableCell rowSpan={2} />
             <TableCell colSpan={2}>Subtotal</TableCell>
             <TableCell align="right">blah</TableCell>
-          </TableRow>
+          </TableRow> */}
 		  
         </TableBody>
       </Table>
