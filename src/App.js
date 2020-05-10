@@ -14,6 +14,7 @@ import JsonGenerousDonors from './GenerousDonors/JsonGenerousDonors'
 import JsonMonthOrders from './MonthOrders/JsonMonthOrders'
 import JsonTopDonations from './TopDonations/JsonTopDonations'
 import JsonFoodTypes from './FoodTypes/JsonFoodTypes'
+import JsonCustomerValue from './CustomerValue/JsonCustomerValue'
 import { Chart } from "react-google-charts";
 
 import './App.css';
@@ -377,10 +378,12 @@ function App () {
 			<TablePlentiful/>
 			
 			<h1> View 4</h1>
-			 <ColumnChart/>
-			 <PieChart/>
+      
+		
+       <JsonCustomerValue/>
+	
 			
-			 <ColumnChartMostCommonlyOrdered/>
+			
 			 <div>
 					<input type="text" className="input" placeholder="Search..." />
 					<ul>...</ul>

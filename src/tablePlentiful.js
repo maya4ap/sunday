@@ -115,6 +115,7 @@ class table extends Component{
             <TableCell align="right">CommonName</TableCell>
 			<TableCell align="right">Expiration Date</TableCell>
 			<TableCell align="right">Number Available</TableCell>
+      <TableCell align="right">Excess</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -122,13 +123,14 @@ class table extends Component{
           {this.state.array.map(foodP => (
             
            
-            <TableRow key={this.state.array[0]}>
+            <TableRow key={this.state.array[0][2]}>
               <TableCell component="th" scope="row">
-                {foodP.FoodID}
+                {this.state.array[0][2]}
               </TableCell>
               <TableCell align="right">{this.state.array[0][3]}</TableCell>
 			  <TableCell align="right">{this.state.array[this.state.i][4]}</TableCell>
-			  <TableCell align="right">{foodP.NumberAvailable}</TableCell>
+        <TableCell align="right">{this.state.array[this.state.i][5]}</TableCell>
+			  <TableCell align="right">{this.state.array[this.state.i][6]}</TableCell>
             </TableRow>
            
           ))}
