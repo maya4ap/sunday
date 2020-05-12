@@ -80,7 +80,7 @@ class table extends Component{
         console.log(this.state.i);
       }
   
-      componentDidMount = () => 
+      onFunc = () => 
       {
         const jsonStuff = async() => {
           console.log("foodP");
@@ -132,11 +132,22 @@ class table extends Component{
     
                   
     }
-      {jsonStuff()}
+
+    const TableA = () =>{
+      return(
+        <h1> tableAtest</h1>
+      )
       
+    }
+      {jsonStuff()}
+      {TableA()}
+     
+
+    
       }
 
       onTable(){
+
         
       } 
 	
@@ -150,11 +161,11 @@ class table extends Component{
 
 	<div>
 
-<button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>
+<button onClick={() => this.onFunc} className="btn btn-primary">Choose 800-000001</button>
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
-		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
+		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onFunc} className="btn btn-primary">Submit</button>
 
 		<h1> Table </h1>
 		{/* {this.state.array.map( (_dataDetail, index) => {
@@ -163,47 +174,50 @@ class table extends Component{
 						
 						   )
 	} */}
-	
-	
-	<TableContainer component={Paper}>
-      <Table>
-        <TableHead>
-		
-          <TableRow>
-            <TableCell>FoodID</TableCell>
-            <TableCell align="right">Common Name</TableCell>
-			<TableCell align="right">Average Order</TableCell>
-			<TableCell align="right">Number Available</TableCell>
-      <TableCell align="right">Number of Excess</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-
-          {this.state.array.map(foodP=> (
+	 <div>
+          <h1> hi</h1>
+          
+          <TableContainer component={Paper}>
+              <Table>
+                <TableHead>
             
-           
-            <TableRow key={this.state.array[0][2]}>
-              <TableCell component="th" scope="row">
-                {this.state.array[0][2]}
-              </TableCell>
-              <TableCell align="right">{foodP[3]}</TableCell>
-			  <TableCell align="right">{foodP[4]}</TableCell>
-        <TableCell align="right">{foodP[5]}</TableCell>
-			  <TableCell align="right">{foodP[6]}</TableCell>
-            </TableRow>
-           
-          ))}
-		    
-		  
-		  {/* <TableRow>
-            <TableCell rowSpan={2} />
-            <TableCell colSpan={2}>Subtotal</TableCell>
-            <TableCell align="right">blah</TableCell>
-          </TableRow> */}
-		  
-        </TableBody>
-      </Table>
-    </TableContainer>
+                  <TableRow>
+                    <TableCell>FoodID</TableCell>
+                    <TableCell align="right">Common Name</TableCell>
+              <TableCell align="right">Average Order</TableCell>
+              <TableCell align="right">Number Available</TableCell>
+              <TableCell align="right">Number of Excess</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+        
+                  {this.state.array.map(foodP=> (
+                    
+                   
+                    <TableRow key={this.state.array[0][2]}>
+                      <TableCell component="th" scope="row">
+                        {this.state.array[0][2]}
+                      </TableCell>
+                      <TableCell align="right">{foodP[3]}</TableCell>
+                <TableCell align="right">{foodP[4]}</TableCell>
+                <TableCell align="right">{foodP[5]}</TableCell>
+                <TableCell align="right">{foodP[6]}</TableCell>
+                    </TableRow>
+                   
+                  ))}
+                
+              
+              {/* <TableRow>
+                    <TableCell rowSpan={2} />
+                    <TableCell colSpan={2}>Subtotal</TableCell>
+                    <TableCell align="right">blah</TableCell>
+                  </TableRow> */}
+              
+                </TableBody>
+              </Table>
+            </TableContainer>
+            </div>
+	
 	
 	 
 	
