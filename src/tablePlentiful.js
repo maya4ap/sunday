@@ -33,6 +33,46 @@ class table extends Component{
 				};
 				
       }
+
+     
+        onFuncOne()
+        {
+          console.log("onFunc");
+          this.setState({
+            //pass: this.state.pass + 3
+            pass: "800-000001"
+          })
+          console.log(this.state.pass);
+        }
+      
+        onFuncTwo()
+        {
+          console.log("onFunc");
+          this.setState({
+            //pass: this.state.pass + 3
+            pass: "800-000002"
+          })
+          console.log(this.state.pass);
+        }
+
+        onFuncThree()
+        {
+          console.log("onFunc");
+          this.setState({
+            //pass: this.state.pass + 3
+            pass: "800-000003"
+          })
+          console.log(this.state.pass);
+        }
+        onFuncFour()
+        {
+          console.log("onFunc");
+          this.setState({
+            //pass: this.state.pass + 3
+            pass: "800-000004"
+          })
+          console.log(this.state.pass);
+        }
       
       inc(){
         this.state.i+=1;
@@ -94,11 +134,28 @@ class table extends Component{
     }
       {jsonStuff()}
       
+      }
+
+      onTable(){
+        
       } 
 	
 	render(){
 	return(
+
+
+		
+	
+
+
 	<div>
+
+<button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>
+		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
+		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
+		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
+		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
+
 		<h1> Table </h1>
 		{/* {this.state.array.map( (_dataDetail, index) => {
 										return <h1> {"m\n\n\n"} {index}</h1>
