@@ -1,8 +1,7 @@
 import React, {Component } from 'react'
-//import TablesTest from './tablesTest';
-import GraphsTopDonations from './GraphsTopDonations';
+// import GraphsTopDonations from './GraphsTopDonations';
 
-class JsonTopDonations extends Component{
+class CustomerGraphA extends Component{
 		
 		constructor(props)	
 			{
@@ -157,7 +156,7 @@ class JsonTopDonations extends Component{
 		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button>
 		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
 	
-		<GraphsTopDonations chartData = {this.state.chartData}/>
+		{/* <GraphsTopDonations chartData = {this.state.chartData}/> */}
 	 
 		
 	
@@ -166,7 +165,7 @@ class JsonTopDonations extends Component{
 	}
 }
 
-export default JsonTopDonations;
+export default CustomerGraphA;
 
 
 	

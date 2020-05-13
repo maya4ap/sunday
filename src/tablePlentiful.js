@@ -108,7 +108,7 @@ class table extends Component{
           {
             // console.log(jsonTemp.result.result.foodbank_id[0]);
            
-           
+           if(jsonTemp.result.result[i].foodbank_id==this.state.pass){
             arrayA.push([jsonTemp.result.result[i].foodbank_id,
                jsonTemp.result.result[i].foodbank_name,
                 jsonTemp.result.result[i].food_id,
@@ -116,6 +116,7 @@ class table extends Component{
                 jsonTemp.result.result[i].averageOrder,
                 jsonTemp.result.result[i].qty,
                 jsonTemp.result.result[i].excess])
+            }
           
         //  arrayA.push([jsonTemp.result.result[i]]);
             
@@ -127,8 +128,8 @@ class table extends Component{
 
           console.log("table array state");
       console.log(this.state.array);
-      console.log("one elment");
-			console.log(this.state.array[1][3]);
+//      console.log("one elment");
+//			console.log(this.state.array[1][3]);
     
                   
     }
