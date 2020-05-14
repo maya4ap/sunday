@@ -4,6 +4,9 @@ import dataTH from './TaskHours.json';
 import Table from "./table";
 import TablesTest from './tablesTest';
 import TablePlentiful from './tablePlentiful';
+import TableLow from './tableLow';
+import TableZero from './tableZero';
+import TableByDate from './tableByDate';
 //import SearchBarGeneral from './searchBarGeneral';
 import TopBar from "./topBar"
 import LoginHome from './LoginHome';
@@ -337,14 +340,17 @@ function App () {
 			<Link to="/dash4"> Dash 4</Link>
 			
 			<div style={{ display: 'flex', maxWidth: 900 }}>
+        
 			<h1> View 1</h1>
 			
-				
+
+			<TableByDate/>	
 			  {/* <PieChartFoodType/> */}
         <JsonFoodTypes/> 
         {/* <JsonTwo/> */}
         <JsonGenerousDonors/>
 			  {/* <ColumnChartBestDonors/> */}
+        <CustomerGraphB/>
 			  <div>
 					<input type="text" className="input" placeholder="Search..." />
 					<ul>...</ul>
@@ -376,14 +382,14 @@ function App () {
 					<ul>...</ul>
 			</div>
 			 <TablePlentiful/>
-			 <TablePlentiful/>
-			<TablePlentiful/>
+			 <TableLow/>
+			<TableZero/>
 			
 			<h1> View 4</h1>
       
 		
        <JsonCustomerValue/>
-	
+        <CustomerGraphB/>
 			
 			
 			 <div>

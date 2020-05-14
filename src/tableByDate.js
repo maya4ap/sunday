@@ -112,7 +112,7 @@ class table extends Component{
         const jsonStuff = async() => {
           console.log("foodP");
           console.log(foodP);
-          const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/excess')
+          const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/donation')
           .catch(error => console.log(error))
           const jsonTemp = await responseTemp.json()
           const keys = Object.keys(jsonTemp.result)
@@ -124,13 +124,6 @@ class table extends Component{
           console.log(jsonTemp.result.result[0].foodbank_id);
          // const arrayA = [ ["foodBankID","foodbankName","foodID","item","averageOrder","quantity","excess"] ]
          const arrayA =[]
-        //  =[jsonTemp.result.result[5].foodbank_id,
-        //   jsonTemp.result.result[5].foodbank_name,
-        //    jsonTemp.result.result[5].food_id,
-        //    jsonTemp.result.result[5].item,
-        //    jsonTemp.result.result[5].averageOrder,
-        //    jsonTemp.result.result[5].qty,
-        //    jsonTemp.result.result[5].excess]
           for (let i = 0; i < jsonTemp.result.result.length; i += 1)
           {
             // console.log(jsonTemp.result.result.foodbank_id[0]);
@@ -138,11 +131,10 @@ class table extends Component{
            if(jsonTemp.result.result[i].foodbank_id==this.state.pass){
             arrayA.push([jsonTemp.result.result[i].foodbank_id,
                jsonTemp.result.result[i].foodbank_name,
-                jsonTemp.result.result[i].food_id,
+                jsonTemp.result.result[i].dateselected,
+                jsonTemp.result.result[i].foodID,
                 jsonTemp.result.result[i].item,
-                jsonTemp.result.result[i].averageOrder,
-                jsonTemp.result.result[i].qty,
-                jsonTemp.result.result[i].excess])
+            ])
             }
           
         //  arrayA.push([jsonTemp.result.result[i]]);
@@ -206,17 +198,18 @@ class table extends Component{
 						   )
 	} */}
 	 <div>
-  
+         
+          
           <TableContainer component={Paper}>
               <Table>
                 <TableHead>
             
                   <TableRow>
-                    <TableCell>FoodID</TableCell>
-                    <TableCell align="right">Common Name</TableCell>
-              <TableCell align="right">Average Order</TableCell>
-              <TableCell align="right">Number Available</TableCell>
-              <TableCell align="right">Number of Excess</TableCell>
+                    {/* <TableCell>FoodID</TableCell> */}
+                    <TableCell >Donation Date</TableCell>
+              <TableCell align="right">Food ID</TableCell>
+              <TableCell align="right">Common Name</TableCell>
+              
                   </TableRow>
                 </TableHead>
                 <TableBody>

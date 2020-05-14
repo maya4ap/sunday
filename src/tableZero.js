@@ -73,33 +73,6 @@ class table extends Component{
           })
           console.log(this.state.pass);
         }
-        onFuncFive()
-        {
-          console.log("onFunc");
-          this.setState({
-            //pass: this.state.pass + 3
-            pass: "800-000005"
-          })
-          console.log(this.state.pass);
-        }
-        onFuncSix()
-        {
-          console.log("onFunc");
-          this.setState({
-            //pass: this.state.pass + 3
-            pass: "800-000006"
-          })
-          console.log(this.state.pass);
-        }
-        onFuncSevem()
-        {
-          console.log("onFunc");
-          this.setState({
-            //pass: this.state.pass + 3
-            pass: "800-000007"
-          })
-          console.log(this.state.pass);
-        }
       
       inc(){
         this.state.i+=1;
@@ -112,13 +85,13 @@ class table extends Component{
         const jsonStuff = async() => {
           console.log("foodP");
           console.log(foodP);
-          const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/excess')
+          const responseTemp = await fetch ('https://dc3so1gav1.execute-api.us-west-1.amazonaws.com/dev/api/v2/zero')
           .catch(error => console.log(error))
           const jsonTemp = await responseTemp.json()
           const keys = Object.keys(jsonTemp.result)
           const values = Object.values(jsonTemp.result)
           const keyTemp = ["s","t","r","i","n","g"]
-          console.log("tableExcess TEST");
+          console.log("tABLE low LOW low LOW LOW LOW low");
           console.log(jsonTemp.result.message);
           console.log(jsonTemp.result.result[0]);
           console.log(jsonTemp.result.result[0].foodbank_id);
@@ -140,9 +113,11 @@ class table extends Component{
                jsonTemp.result.result[i].foodbank_name,
                 jsonTemp.result.result[i].food_id,
                 jsonTemp.result.result[i].item,
-                jsonTemp.result.result[i].averageOrder,
-                jsonTemp.result.result[i].qty,
-                jsonTemp.result.result[i].excess])
+                // jsonTemp.result.result[i].averageOrder,
+                // jsonTemp.result.result[i].qty,
+                // jsonTemp.result.result[i].excess
+            ]
+                )
             }
           
         //  arrayA.push([jsonTemp.result.result[i]]);
@@ -193,9 +168,6 @@ class table extends Component{
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
-    <button onClick={() => this.onFuncFive()} className="btn btn-primary">Choose 800-000005</button>
-    <button onClick={() => this.onFuncSix()} className="btn btn-primary">Choose 800-000006</button>
-    <button onClick={() => this.onFuncSeven()} className="btn btn-primary">Choose 800-000007</button>
 		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onFunc} className="btn btn-primary">Submit</button>
 
 		<h1> Table </h1>
@@ -206,7 +178,8 @@ class table extends Component{
 						   )
 	} */}
 	 <div>
-  
+          
+          
           <TableContainer component={Paper}>
               <Table>
                 <TableHead>
@@ -214,9 +187,9 @@ class table extends Component{
                   <TableRow>
                     <TableCell>FoodID</TableCell>
                     <TableCell align="right">Common Name</TableCell>
-              <TableCell align="right">Average Order</TableCell>
-              <TableCell align="right">Number Available</TableCell>
-              <TableCell align="right">Number of Excess</TableCell>
+               {/* <TableCell align="right">Average Order</TableCell>
+               <TableCell align="right">Number Available</TableCell>
+               <TableCell align="right">Number of Excess</TableCell> */}
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -229,9 +202,9 @@ class table extends Component{
                         {this.state.array[0][2]}
                       </TableCell>
                       <TableCell align="right">{foodP[3]}</TableCell>
-                <TableCell align="right">{foodP[4]}</TableCell>
+                {/* <TableCell align="right">{foodP[4]}</TableCell>
                 <TableCell align="right">{foodP[5]}</TableCell>
-                <TableCell align="right">{foodP[6]}</TableCell>
+                <TableCell align="right">{foodP[6]}</TableCell> */}
                     </TableRow>
                    
                   ))}
