@@ -10,7 +10,7 @@ class JsonCustomerValue extends Component{
 				this.
 				state = {
 				chartData: [],
-				pass:"800-000001"
+				pass:props.pass
 				};
 				
 			}
@@ -119,7 +119,9 @@ class JsonCustomerValue extends Component{
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
-				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
+				console.log("custVal props PASSS");
+				console.log(this.props.pass);
+				if(jsonTemp.result.result[i].foodbank_id == this.props.pass)
 				chartDataA.push([jsonTemp.result.result[i].first_name+" "+ jsonTemp.result.result[i].last_name, jsonTemp.result.result[i].Total_Value])
 				console.log("foodbank is");
 				console.log(jsonTemp.result.result[i].foodbank_id);
@@ -146,7 +148,7 @@ class JsonCustomerValue extends Component{
 		return(
 	
 	<div>
-		<button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>
+		{/* <button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
@@ -154,7 +156,7 @@ class JsonCustomerValue extends Component{
 		<button onClick={() => this.onFuncSix()} className="btn btn-primary">Choose 800-000006</button>
 		<button onClick={() => this.onFuncSeven()} className="btn btn-primary">Choose 800-000007</button>
 		<button onClick={() => this.onFuncEight()} className="btn btn-primary">Choose 800-000008</button>
-		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button>
+		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button> */}
 		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
 	
 		<GraphsCustomerValue chartData = {this.state.chartData}/>

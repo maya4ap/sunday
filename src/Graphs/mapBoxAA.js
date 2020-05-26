@@ -2,16 +2,16 @@ import React, {useState} from 'react';
 import ReactMapGL, {Marker} from "react-map-gl";
 import * as data from "./exampleSkate.json";
 
-//you dont need to type myinfo.js since it is default file for import
+
 
 function App() {
 
   const [viewport, setViewport] = useState({
-    width: "100%",
-    height: 700,
+    width: "96%",
+    height: 500,
     latitude: 36.954117,
     longitude: -122.030799,
-    zoom: 13
+    zoom: 12
   });
 
 
@@ -32,16 +32,27 @@ function App() {
         setViewport(viewport);
       }}  
       >
-      <Marker
-        latitude={36.964917}
-        longitude= {-122.015892}
-        
-      >
-      {/* <div> POINT</div> */}
-      <button>
-          <img src = "/redpin.svg" alt = "Icon"/>
-       </button>
-  </Marker>
+
+{data.features.map((strand) => (
+        <Marker key = {strand.properties.PARK_ID}
+        latitude = {strand.geometry.coordinates[0]}
+        longitude = {strand.geometry.coordinates[1]}>
+
+        <button class = "marker-btn">
+
+        <img src = "/redpin.svg" />
+
+        </button>
+
+
+        </Marker>
+
+
+
+
+        ) )}
+
+  
       
       
       </ReactMapGL>

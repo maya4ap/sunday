@@ -10,7 +10,7 @@ class JsonMonthOrders extends Component{
 				this.
 				state = {
 				chartData: [],
-				pass: "800-000001"
+				pass: props.pass
 				};
 				
 			}
@@ -120,7 +120,7 @@ class JsonMonthOrders extends Component{
 			console.log("first bit of chartData");
 			console.log(chartDataA);
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
-				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
+				if(jsonTemp.result.result[i].foodbank_id == this.props.pass)
 				chartDataA.push([jsonTemp.result.result[i].Month, parseInt(jsonTemp.result.result[i].TotalOrders)])
 				console.log("foodbank is");
 				console.log(jsonTemp.result.result[i].foodbank_id);
@@ -145,10 +145,12 @@ class JsonMonthOrders extends Component{
 
 		
 		return(
+			<div>
+				{/* <h1> Hey,{this.props.pass}</h1> */}
 
 	<div>
 
-		<button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>	
+		{/* <button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>	
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
@@ -156,7 +158,7 @@ class JsonMonthOrders extends Component{
 		<button onClick={() => this.onFuncSix()} className="btn btn-primary">Choose 800-000006</button>
 		<button onClick={() => this.onFuncSeven()} className="btn btn-primary">Choose 800-000007</button>
 		<button onClick={() => this.onFuncEight()} className="btn btn-primary">Choose 800-000008</button>
-		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button>
+		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button> */}
 		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
 	
 		<GraphsMonthOrders chartData = {this.state.chartData}/>
@@ -164,6 +166,7 @@ class JsonMonthOrders extends Component{
 		
 	
 	</div>	
+	</div>
 		);
 	}
 }

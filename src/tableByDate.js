@@ -16,7 +16,7 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 350,
   },
 });
 
@@ -91,7 +91,7 @@ class table extends Component{
           })
           console.log(this.state.pass);
         }
-        onFuncSevem()
+        onFuncSeven()
         {
           console.log("onFunc");
           this.setState({

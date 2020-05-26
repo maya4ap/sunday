@@ -126,7 +126,8 @@ class JsonGenerousDonors extends Component{
 			const values = Object.values(jsonTemp.result)
 			const keyTemp = ["s","t","r","i","n","g"]
 			console.log("testtt");
-
+			console.log("this.props.pass");
+			console.log(this.props.pass);
 			console.log("email is ");
 			console.log(this.props.email);
 			console.log("foodbank id is ");
@@ -140,7 +141,7 @@ class JsonGenerousDonors extends Component{
 			for (let i = 0; i < jsonTemp.result.result.length; i += 1) {
 				console.log("this.state.pass");
 				console.log(this.state.pass);
-				if(jsonTemp.result.result[i].foodbank_id == this.state.pass)
+				if(jsonTemp.result.result[i].foodbank_id == this.props.pass)
 				chartDataA.push([jsonTemp.result.result[i].donor_id, parseInt(jsonTemp.result.result[i].totalDonation)])
 			  }
 			console.log("second bit of chartData");
@@ -165,12 +166,11 @@ class JsonGenerousDonors extends Component{
 		return(
 	
 	<div>
-        {/* <h1> Hey,{this.props.pass}</h1>
-		 */
-		 //important prop pass test!!
-		 }
+         <b> Hey,{this.props.pass}</b>
+	
+		 
 
-<button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>
+{/* <button onClick={() => this.onFuncOne()} className="btn btn-primary">Choose 800-000001</button>
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
@@ -178,7 +178,7 @@ class JsonGenerousDonors extends Component{
 		<button onClick={() => this.onFuncSix()} className="btn btn-primary">Choose 800-000006</button>
 		<button onClick={() => this.onFuncSeven()} className="btn btn-primary">Choose 800-000007</button>
 		<button onClick={() => this.onFuncEight()} className="btn btn-primary">Choose 800-000008</button>
-		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button>
+		<button onClick={() => this.onFuncNine()} className="btn btn-primary">Choose 800-000009</button> */}
 		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onDefault} className="btn btn-primary">Submit</button>
 		<div>
 			</div>

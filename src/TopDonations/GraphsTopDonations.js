@@ -50,8 +50,8 @@ class GraphsTopDonations extends Component{
           ))}	 */}
 
 <Chart
-    width={800}
-    height={600}
+    width={500}
+    height={300}
     chartType="PieChart"
     loader={<div>Loading Chart</div>}
     data={this.props.chartData}

@@ -91,7 +91,7 @@ class table extends Component{
           })
           console.log(this.state.pass);
         }
-        onFuncSevem()
+        onFuncSeven()
         {
           console.log("onFunc");
           this.setState({
@@ -178,6 +178,10 @@ class table extends Component{
 
         
       } 
+
+      myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
 	
 	render(){
 	return(
@@ -190,7 +194,21 @@ class table extends Component{
 	<div>
 
 <button onClick={() => this.onFunc} className="btn btn-primary">Choose 800-000001</button>
-		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
+{/* <div class="dropdown">
+    <button onClick={() => this.myFunction} className="dropbtn">Choose 800-000002</button>
+    <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  </div> */}
+   <form onSubmit={this.onFunc}>
+        <label>
+          Name:
+          <input type="text" value={this.state.pass} onChange={this.onFunc} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
     <button onClick={() => this.onFuncFive()} className="btn btn-primary">Choose 800-000005</button>

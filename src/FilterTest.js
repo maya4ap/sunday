@@ -4,6 +4,16 @@ import GraphsTwo from './graphsTest/GraphsTwo';
 import JsonThree from './graphsTest/JsonThree';
 import JsonGenerousDonors from './GenerousDonors/JsonGenerousDonors';
 import JsonMonthOrders from './MonthOrders/JsonMonthOrders'
+import JsonTopDonations from './TopDonations/JsonTopDonations'
+import JsonFoodTypes from './FoodTypes/JsonFoodTypes'
+import JsonCustomerValue from './CustomerValue/JsonCustomerValue'
+import TablesTest from './tablesTest';
+import TablePlentiful from './tablePlentiful';
+import TableLow from './tableLow';
+import TableZero from './tableZero';
+import TableByDate from './tableByDate';
+import CustomerGraphB from './Graphs/CustomerGraphB'
+import MapBoxAA from './Graphs/mapBoxAA';
 
 class FilterTest extends React.Component {
     constructor(props) {
@@ -24,7 +34,7 @@ class FilterTest extends React.Component {
     handleSubmit = (event) => {
       alert('Your favorite flavor is: ' + this.state.value);
       event.preventDefault();
-    //   <JsonGenerousDonors value = {this.state.value}/>
+      //  <JsonGenerousDonors pass = {this.state.value}/>
     }
 
  
@@ -52,8 +62,29 @@ class FilterTest extends React.Component {
         </form>
         
         {/* <JsonGenerousDonors onSubmt = {this.handleSubmit}/> */}
+        <div style={{ display: 'flex', maxWidth: 900 }}>
+        <TableByDate/>	
+        <JsonFoodTypes pass = {this.state.value}/>
         <JsonGenerousDonors pass = {this.state.value}/>
-        <JsonMonthOrders pass2 = {this.state.value}/>
+        <CustomerGraphB/>
+
+        <JsonMonthOrders pass = {this.state.value}/>
+        </div>
+        <div style={{ display: 'flex' }}>
+        <JsonTopDonations pass = {this.state.value}/>
+  
+
+        <CustomerGraphB/>
+        </div>
+        <div style={{ display: 'flex' }}>
+        <TablePlentiful/>
+			 <TableLow/>
+			<TableZero/>
+      
+      
+        <JsonCustomerValue pass = {this.state.value}/>
+        <CustomerGraphB/> 
+        </div>
 
    
     

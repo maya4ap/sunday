@@ -7,8 +7,8 @@ const PieChartFoodType = () => {
 	
 
 		<Chart
-		width={'500px'}
-	height={'300px'}
+		width={500}
+	height={300}
 		chartType="LineChart"
 		loader={<div>Loading Chart</div>}
         data={

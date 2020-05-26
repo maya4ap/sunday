@@ -2,36 +2,7 @@ import React, {Component } from 'react'
 import { Chart } from "react-google-charts";
 
 
-const PieChartFoodType = () => {
-	return (
-	
 
-		<Chart
-		width={'500px'}
-	height={'300px'}
-		chartType="BarChart"
-		loader={<div>Loading Chart</div>}
-        data={
-			[
-				['FoodType', 'numberCustomers'],
-				['Vegetarian', 117],
-				['Vegan', 554],
-				['Pescatarian', 35],
-				['Meat Tolerant', 782],
-			  ]
-		}
-        options={{
-          chartArea: {
-            width: '50%',
-          },
-          title: 'EUR Price',
-        }}
-        rootProps={{ 'data-testid': '1' }}
-      />
-	
- 
-	);
-  };
 
 class GraphsGenerousDonors extends Component{
 	
@@ -50,8 +21,8 @@ class GraphsGenerousDonors extends Component{
           ))}	 */}
 
 <Chart
-    width={800}
-    height={600}
+    width={500}
+    height={300}
     chartType="ColumnChart"
     loader={<div>Loading Chart</div>}
     data={this.props.chartData}
@@ -68,24 +39,7 @@ class GraphsGenerousDonors extends Component{
     }}
     legendToggle
   />
-{/* 	 
-	 <Chart
-		width={'500px'}
-	height={'300px'}
-		chartType="BarChart"
-		loader={<div>Loading Chart</div>}
-        data={
-			this.props.chartData
-		}
-        options={{
-          chartArea: {
-            width: '50%',
-          },
-          title: 'EUR Price',
-        }}
-        rootProps={{ 'data-testid': '1' }}
-      />
-	 */}
+
 	
 	</div>	
 		)

@@ -20,6 +20,7 @@ import JsonFoodTypes from './FoodTypes/JsonFoodTypes'
 import JsonCustomerValue from './CustomerValue/JsonCustomerValue'
 import CustomerGraphA from './Graphs/CustomerGraphA'
 import CustomerGraphB from './Graphs/CustomerGraphB'
+import MapBoxAA from './Graphs/mapBoxAA';
 import { Chart } from "react-google-charts";
 
 import './App.css';
@@ -429,10 +430,10 @@ function App () {
 			return (
 			<div>
 			
+			<MapBoxAA/>
 			
-			
-			<CustomerGraphB/>
-			
+			{/* <CustomerGraphB/>
+			 */}
 			
 			
 			
