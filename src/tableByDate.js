@@ -181,14 +181,14 @@ class table extends Component{
 
 	<div>
 
-<button onClick={() => this.onFunc} className="btn btn-primary">Choose 800-000001</button>
+{/* <button onClick={() => this.onFunc} className="btn btn-primary">Choose 800-000001</button>
 		<button onClick={() => this.onFuncTwo()} className="btn btn-primary">Choose 800-000002</button>
 		<button onClick={() => this.onFuncThree()} className="btn btn-primary">Choose 800-000003</button>
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
     <button onClick={() => this.onFuncFive()} className="btn btn-primary">Choose 800-000005</button>
     <button onClick={() => this.onFuncSix()} className="btn btn-primary">Choose 800-000006</button>
     <button onClick={() => this.onFuncSeven()} className="btn btn-primary">Choose 800-000007</button>
-		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onFunc} className="btn btn-primary">Submit</button>
+		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onFunc} className="btn btn-primary">Submit</button> */}
 
 		<h1> Table </h1>
 		{/* {this.state.array.map( (_dataDetail, index) => {

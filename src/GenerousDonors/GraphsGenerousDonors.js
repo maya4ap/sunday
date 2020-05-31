@@ -21,8 +21,8 @@ class GraphsGenerousDonors extends Component{
           ))}	 */}
 
 <Chart
-    width={500}
-    height={300}
+    width={400}
+    height={200}
     chartType="ColumnChart"
     loader={<div>Loading Chart</div>}
     data={this.props.chartData}

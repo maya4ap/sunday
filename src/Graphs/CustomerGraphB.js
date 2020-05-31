@@ -7,8 +7,8 @@ const PieChartFoodType = () => {
 	
 
 <Chart
-  width={'500px'}
-  height={'300px'}
+  width={'400px'}
+  height={'200px'}
   chartType="GeoChart"
   data={[
     ['Country', 'Popularity'],

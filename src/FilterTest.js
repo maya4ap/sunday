@@ -63,18 +63,21 @@ class FilterTest extends React.Component {
         
         {/* <JsonGenerousDonors onSubmt = {this.handleSubmit}/> */}
         <div style={{ display: 'flex', maxWidth: 900 }}>
-        <TableByDate/>	
+        
         <JsonFoodTypes pass = {this.state.value}/>
         <JsonGenerousDonors pass = {this.state.value}/>
+        <TableByDate/>	
         <CustomerGraphB/>
-
-        <JsonMonthOrders pass = {this.state.value}/>
+        <div>
+        
+        </div>
         </div>
         <div style={{ display: 'flex' }}>
         <JsonTopDonations pass = {this.state.value}/>
   
 
         <CustomerGraphB/>
+        <JsonMonthOrders pass = {this.state.value}/>
         </div>
         <div style={{ display: 'flex' }}>
         <TablePlentiful/>

@@ -476,7 +476,7 @@ function App () {
 			return (
 			<div>
 			
-      <JsonThree/>
+     
 			{/* {
 				dataAW.map( (dataDetail, index) => {
 										return <h1> {dataDetail.Age}</h1>

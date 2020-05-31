@@ -50,8 +50,8 @@ class GraphsCustomerValue extends Component{
           ))}	 */}
 
 <Chart
-    width={800}
-    height={600}
+    width={400}
+    height={200}
     chartType="LineChart"
     loader={<div>Loading Chart</div>}
     data={this.props.chartData}
