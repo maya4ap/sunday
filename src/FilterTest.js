@@ -80,9 +80,9 @@ class FilterTest extends React.Component {
         <JsonMonthOrders pass = {this.state.value}/>
         </div>
         <div style={{ display: 'flex' }}>
-        <TablePlentiful/>
-			 <TableLow/>
-			<TableZero/>
+        <TablePlentiful pass = {this.state.value}/>
+			 <TableLow pass = {this.state.value}/>
+			<TableZero pass = {this.state.value}/>
       
       
         <JsonCustomerValue pass = {this.state.value}/>

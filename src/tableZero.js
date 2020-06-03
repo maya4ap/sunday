@@ -16,9 +16,10 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 950,
   },
 });
+
 
 class table extends Component{
 
@@ -28,7 +29,7 @@ class table extends Component{
 				this.
 				state = {
 				array: [],
-        pass: "800-000001",
+        pass: props.pass,
         i:0
 				};
 				
@@ -108,7 +109,7 @@ class table extends Component{
           {
             // console.log(jsonTemp.result.result.foodbank_id[0]);
            
-           if(jsonTemp.result.result[i].foodbank_id==this.state.pass){
+           if(jsonTemp.result.result[i].foodbank_id==this.props.pass){
             arrayA.push([jsonTemp.result.result[i].foodbank_id,
                jsonTemp.result.result[i].foodbank_name,
                 jsonTemp.result.result[i].food_id,
@@ -155,6 +156,7 @@ class table extends Component{
       } 
 	
 	render(){
+    const classes = useStyles();
 	return(
 
 
@@ -170,7 +172,7 @@ class table extends Component{
 		<button onClick={() => this.onFuncFour()} className="btn btn-primary">Choose 800-000004</button>
 		<button onClick={() => this.onFuncTwo(),this.onFuncTwo,this.onFunc} className="btn btn-primary">Submit</button>
 
-		<h1> Table </h1>
+		<h1> Zero</h1>
 		{/* {this.state.array.map( (_dataDetail, index) => {
 										return <h1> {"m\n\n\n"} {index}</h1>
 									} 
