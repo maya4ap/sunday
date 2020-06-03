@@ -115,7 +115,7 @@ class JsonTopDonations extends Component{
 			const keyTemp = ["s","t","r","i","n","g"]
 			console.log("testtt");
 			console.log(jsonTemp.result.message);
-			console.log(jsonTemp.result.result[0].SwagCompName);
+		
 			const chartDataA = [["key", "val"]]
 			console.log("first bit of chartData");
 			console.log(chartDataA);
