@@ -12,7 +12,7 @@
     "aws-amplify": "^3.0.8",
     "bootstrap": "^4.4.1",
     "google-maps-react": "^2.0.6",
-    "googleapis": "^39.2.0",
+    "googleapis": "^166.0.0",
     "mapbox": "^1.0.0-beta10",
     "particles": "^0.3.1",
     "react": "^16.13.1",
@@ -26,7 +26,7 @@
     "react-map-gl": "^4.1.16",
     "react-particles-js": "^2.7.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
